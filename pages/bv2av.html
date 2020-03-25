@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A layout example that shows off a responsive product landing page.">
+  <title>BV-AV互换</title>
+  <style>
+    input {
+      border: 1px solid #ccc;
+      padding: 7px 0px;
+      border-radius: 3px;
+      padding-left: 5px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+      -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+      -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+      transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    }
+
+    input:focus {
+      border-color: #66afe9;
+      outline: 0;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+    }
+
+    h2 {
+      color: rgb(22, 0, 119);
+    }
+
+    button {
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      padding: 8px 8px;
+      text-align: center;
+      background-color: white;
+      color: black;
+      border: 2px solid #4CAF50;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    body {
+      background-color: rgb(219, 219, 219);
+    }
+
+    .abc {
+      top: 30px;
+      text-align: center;
+      width: 98%;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      box-shadow: 10px 10px 10px rgb(126, 126, 126);
+      height: auto;
+      background-color: rgb(188, 117, 255);
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="abc">
+    <h2>id转换工具</h2>
+    <input id="test" value="" placeholder="输入例如BV1WE411c7q9"/>
+    <button onclick="dec(document.getElementById('test').value)">转为av</button>
+    <button onclick="enc(document.getElementById('test').value)">转为bv</button>
+    <input id="out" placeholder="结果框"></p>
+  </div>
+  <script>
+    var table = 'fZodR9XQDSUm21yCkr6zBqiveYah8bt4xsWpHnJE7jL5VG3guMTKNPAwcF';
+    var tr = new Array();
+    for (i = 0; i < 58; i++) {
+      tr[table[i]] = i;
+      s = [11, 10, 3, 8, 4, 6];
+
+    }
+    var xor = 177451812;
+    var add = 8728348608;
+    function dec(x) {
+      r = 0;
+      for (i = 0; i < 6; i++) {
+        r += tr[x[s[i]]] * 58 ** i;
+      }
+      document.getElementById('out').value = (r - add) ^ xor;
+      // return (r - add) ^ xor;
+    }
+    function enc(x) {
+      x = Number(x);
+      x = (x ^ xor) + add;
+      r = ['B', 'V', '1', ' ', ' ', '4', ' ', '1', ' ', '7', ' ', ' ']
+      for (i = 0; i < 6; i++) {
+        r[s[i]] = table[Math.floor(x / 58) ** i % 58];
+      }
+      document.getElementById('out').value = r.join("");
+      // return r.join("");
+    }
+  </script>
+</body>
+
+</html>
