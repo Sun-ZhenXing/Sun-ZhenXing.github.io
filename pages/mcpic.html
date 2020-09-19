@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Pic -> MC</title>
+  <style type="text/css">
+    body {
+      margin: 0px;
+      background: #cececd;
+    }
+
+    p {
+      text-align: center;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    textarea {
+      width: 90%;
+      height: 200px;
+    }
+  </style>
+  <script type="text/javascript">
+    colors = [
+      [255, 255, 255],
+      [255, 102, 0],
+      [153, 51, 153],
+      [51, 153, 204],
+      [255, 204, 51],
+      [102, 204, 51],
+      [204, 102, 153],
+      [50, 50, 50],
+      [124, 124, 124],
+      [21, 117, 133],
+      [98, 30, 153],
+      [43, 43, 140],
+      [95, 59, 31],
+      [73, 90, 36],
+      [139, 31, 31],
+      [0, 0, 0]
+    ]
+    function dp(v1, v2) {
+      return ((v1[0] - v2[0]) ** 2 + (v1[1] - v2[1]) ** 2 + (v1[2] - v2[2]) ** 2) ** 0.5;
+    }
+    function getNear(r, g, b) {
+      mins = 500000000;
+      index = 0;
+      for (i = 0; i < 16; i++) {
+        d = dp([r, g, b], colors[i]);
+        if (d < mins) {
+          mins = d;
+          index = i
+        }
+      }
+      return index;
+    }
+    window.onload = function () {
+      var canvas = document.createElement('canvas');
+      var context = canvas.getContext('2d');
+      document.getElementById('img').onchange = function () {
+        var img = event.target.files[0];
+        // 检查能否读取图片 
+        if (!img) {
+          return;
+        }
+        // 检查图片类型 
+        if (!(img.type.indexOf('image') == 0 && img.type && /\.(?:jpg|png|gif)$/.test(img.name))) {
+          alert('图片只能是jpg, gif或者png');
+          return;
+        }
+        // 检查图片尺寸 
+        if (img.size > 300 * 1024) {
+          alert('图片不能大于300K');
+          return;
+        }
+        // file reader 
+        var reader = new FileReader();
+        reader.readAsDataURL(img);
+        reader.onload = function (e) { // reader onload start 
+          var image = new Image();
+          image.src = e.target.result;
+          image.onload = function () { // image onload start 
+            var img_width = this.width;
+            var img_height = this.height;
+            // 设置画布尺寸 
+            canvas.width = img_width;
+            canvas.height = img_height;
+            // 将图片按像素写入画布 
+            context.drawImage(this, 0, 0, img_width, img_height);
+            // 读取图片像素信息 
+            var imageData = context.getImageData(0, 0, img_width, img_height);
+            var arrbox = [],
+              length = imageData.data.length;
+            for (var i = 0; i < length; i++) {
+              if (i % 4 === 0) { // 每四个元素为一个像素数据 r,g,b,alpha 
+                var x = i / 4 % img_width + 1;                // 横坐标 
+                var y = Math.floor(i / 4 / img_width) + 1;          // 纵坐标 
+                var alpha = Math.round(imageData.data[i + 3] / 255 * 100) / 100; // alpha 值 
+                var block_id = getNear(imageData.data[i], imageData.data[i + 1], imageData.data[i + 2]);
+                if(block_id != 0){
+                  arrbox.push(x + "," + y + "," + block_id);
+                }
+              }
+            }
+            document.getElementById('out_text').value = img_width + "|" + img_height + "|" + arrbox.join("|")
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <p class="title">上传图片，转化为MC指令</p>
+  <p><input type="file" class="file" id="img"><label class="filebtn" for="img" title="JPG,GIF,PNG">请选择图片(小于300K)</label>
+  </p>
+  <p><textarea id="out_text"></textarea></p>
+  <p>说明：算法设计参考了：https://www.jb51.net/article/80817.htm</p>
+  <p>上传文件的时候不耗费流量，计算是浏览器完成的。没有考虑透明空间的影响。</p>
+  <p>只能上传png, jpg, gif图像</p>
+  <p>您可以<code>Ctrl+S</code>把页面保存起来，以方便离线使用</p>
+  <p>我写的Python算法可以把图片直接转换为命令，请访问：<a href="https://github.com/Sun-ZhenXing/Sun-ZhenXing.github.io/blob/master/files/mc_pic2cmd.py">GitHub</a></p>
+  <p></p>
+</body>
+
+</html>
