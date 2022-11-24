@@ -1,12 +1,13 @@
-import { hopeTheme } from "vuepress-theme-hope";
-import { Navbar } from "./navbar/index.js";
-import { Sidebar } from "./sidebar/index.js";
+import { hopeTheme } from "vuepress-theme-hope"
+import { Navbar } from "./navbar/index.js"
+import { Sidebar } from "./sidebar/index.js"
+import { projects } from "./extend/"
 
 export default hopeTheme({
   hostname: "https://blog.alexsun.top",
 
   author: {
-    name: "Alex Sun",
+    name: "鸭梨",
     url: "https://github.com/Sun-ZhenXing",
   },
 
@@ -14,21 +15,24 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "Sun-ZhenXing/Sun-ZhenXing.github.io",
 
   docsDir: "docs",
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
+    name: "鸭梨",
+    description: "鸭梨的博客",
+
     medias: {
       // Baidu: "https://example.com",
-      // BiliBili: "https://example.com",
+      BiliBili: "https://space.bilibili.com/364834987",
       // Bitbucket: "https://example.com",
       // Dingding: "https://example.com",
       // Discord: "https://example.com",
       // Dribbble: "https://example.com",
-      // Email: "https://example.com",
+      Email: "sun-zhenxing@foxmail.com",
       // Evernote: "https://example.com",
       // Facebook: "https://example.com",
       // Flipboard: "https://example.com",
@@ -54,6 +58,7 @@ export default hopeTheme({
       // Youtube: "https://example.com",
       // Zhihu: "https://example.com",
     },
+    roundAvatar: true,
   },
 
   locales: {
@@ -72,7 +77,8 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个自由的博客",
+        name: "鸭梨",
+        description: "鸭梨的博客",
         intro: "/intro.html",
       },
 
@@ -83,11 +89,11 @@ export default hopeTheme({
     },
   },
 
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-    },
-  },
+  // encrypt: {
+  //   config: {
+  //     "/demo/encrypt.html": ["1234"],
+  //   },
+  // },
 
   plugins: {
     blog: {
@@ -97,28 +103,28 @@ export default hopeTheme({
     // If you don’t need comment feature, you can remove following option
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
     // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
-    comment: {
-      /**
-       * Using Giscus
-       */
-      provider: "Giscus",
-      repo: "vuepress-theme-hope/giscus-discussions",
-      repoId: "R_kgDOG_Pt2A",
-      category: "Announcements",
-      categoryId: "DIC_kwDOG_Pt2M4COD69",
+    // comment: {
+    //   /**
+    //    * Using Giscus
+    //    */
+    //   provider: "Giscus",
+    //   repo: "vuepress-theme-hope/giscus-discussions",
+    //   repoId: "R_kgDOG_Pt2A",
+    //   category: "Announcements",
+    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
 
-      /**
-       * Using Twikoo
-       */
-      // provider: "Twikoo",
-      // envId: "https://twikoo.ccknbc.vercel.app",
+    //   /**
+    //    * Using Twikoo
+    //    */
+    //   // provider: "Twikoo",
+    //   // envId: "https://twikoo.ccknbc.vercel.app",
 
-      /**
-       * Using Waline
-       */
-      // provider: "Waline",
-      // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
-    },
+    //   /**
+    //    * Using Waline
+    //    */
+    //   // provider: "Waline",
+    //   // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
+    // },
 
     // Disable features you don’t want here
     mdEnhance: {
@@ -144,24 +150,15 @@ export default hopeTheme({
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
       sub: true,
       sup: true,
       tabs: true,
       vPre: true,
       vuePlayground: true,
+    },
+
+    sitemap: {
+      extraUrls: projects.items,
     },
 
     pwa: {
@@ -219,11 +216,11 @@ export default hopeTheme({
                 sizes: "192x192",
                 purpose: "monochrome",
                 type: "image/png",
-              },
-            ],
-          },
-        ],
-      },
-    },
-  },
-});
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+})
