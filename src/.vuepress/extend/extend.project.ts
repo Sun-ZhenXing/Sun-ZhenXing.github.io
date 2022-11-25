@@ -2,7 +2,7 @@ type Projects = { items: string[] }
 
 const projects: Projects = {
   items: [
-    '/vuepress-network-notes/'
+    'https://blog.alexsun.top/vuepress-network-notes/'
   ]
 }
 
