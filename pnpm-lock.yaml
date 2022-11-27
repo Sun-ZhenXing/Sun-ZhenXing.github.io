@@ -5451,7 +5451,7 @@ packages:
       jest-worker: registry.npmmirror.com/jest-worker/26.6.2
       rollup: registry.npmmirror.com/rollup/2.79.1
       serialize-javascript: registry.npmmirror.com/serialize-javascript/4.0.0
-      terser: registry.npmmirror.com/terser/5.15.1
+      terser: registry.npmmirror.com/terser/5.16.0
     dev: true
 
   registry.npmmirror.com/rollup/2.78.1:
@@ -5800,10 +5800,10 @@ packages:
       unique-string: registry.npmmirror.com/unique-string/2.0.0
     dev: true
 
-  registry.npmmirror.com/terser/5.15.1:
-    resolution: {integrity: sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.15.1.tgz}
+  registry.npmmirror.com/terser/5.16.0:
+    resolution: {integrity: sha512-KjTV81QKStSfwbNiwlBXfcgMcOloyuRdb62/iLFPGBcVNF4EXjhdYBhYHmbJpiBrVxZhDvltE11j+LBQUxEEJg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/terser/-/terser-5.16.0.tgz}
     name: terser
-    version: 5.15.1
+    version: 5.16.0
     engines: {node: '>=10'}
     hasBin: true
     dependencies:

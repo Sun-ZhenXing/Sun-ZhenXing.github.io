@@ -11,9 +11,17 @@ heroText: 鸭梨的博客
 heroFullScreen: true
 tagline: 元气满满的一天鸭
 projects:
-  - icon: project
+  - icon: book
     name: OpenCV 笔记
     desc: OpenCV 各类笔记合集
     link: https://blog.alexsun.top/vuepress-opencv-notes/
+  - icon: book
+    name: 嵌入式笔记
+    desc: 嵌入式笔记合集
+    link: https://blog.alexsun.top/vuepress-embedded-notes/
+  - icon: book
+    name: 计算机网络笔记
+    desc: 计算机网络笔记合集
+    link: https://blog.alexsun.top/vuepress-network-notes/
 footer: 鸭梨的博客网站
 ---
