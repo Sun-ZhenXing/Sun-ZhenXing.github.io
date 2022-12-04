@@ -67,7 +67,7 @@ export default hopeTheme({
     '/': {
       navbar: Navbar,
       sidebar: Sidebar,
-      footer: '默认页脚',
+      footer: '鸭梨的博客',
       displayFooter: true,
       navbarLayout: {
         left: ['Brand'],

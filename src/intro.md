@@ -1,7 +1,11 @@
 ---
 icon: info
+title: 关于我
+date: 2020-12-04
 ---
 
-# 介绍页
+# 关于我
 
-将你的个人介绍和档案放置在此处。
+这是我的新博客系统，基于 VuePress2 和 [`vuepress-theme-hope`](https://vuepress-theme-hope.github.io/v2/) 主题。
+
+<!-- more -->
