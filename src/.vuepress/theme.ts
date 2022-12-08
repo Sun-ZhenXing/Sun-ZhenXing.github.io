@@ -26,7 +26,6 @@ export default hopeTheme({
   blog: {
     name: '鸭梨',
     description: '鸭梨的博客',
-
     medias: {
       // Baidu: 'https://example.com',
       BiliBili: 'https://space.bilibili.com/364834987',
@@ -126,7 +125,7 @@ export default hopeTheme({
       flowchart: false,
       gfm: true,
       imageLazyload: true,
-      imageTitle: true,
+      figure: true,
       imageSize: true,
       include: true,
       katex: true,
