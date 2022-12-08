@@ -23,5 +23,9 @@ projects:
     name: 计算机网络笔记
     desc: 计算机网络笔记合集
     link: https://blog.alexsun.top/vuepress-network-notes/
+  - icon: book
+    name: 数据库笔记
+    desc: 数据库笔记合集
+    link: https://blog.alexsun.top/vuepress-database-notes/
 footer: 鸭梨的博客网站
 ---
