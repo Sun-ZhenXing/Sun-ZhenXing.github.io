@@ -14,6 +14,23 @@ tag:
 
 # 博客配置指南
 
+## 基础配置
+
+配置项目：
+- `src/.vuepress/config.ts` 配置
+- `src/README.md` 主页配置
+- `src/.vuepress/navbar/` 导航栏配置
+- `src/.vuepress/sidebar/` 侧边栏配置
+- `src/.vuepress/style/` 样式配置
+- `src/intro.md` 个性化主页配置
+
+::: tip 重要功能
+
+当前的 ***在 GitHub 上编辑*** 功能不能自动配置，其 `config.ts` 配置项为 `docsDir: 'docs'`，但是默认创建文件夹为 `src/`，所以需要将 `'docs'` 修改为 `'src'`。
+
+:::
+
+
 ## 页面结构
 
 页面通常包含下面的部分：

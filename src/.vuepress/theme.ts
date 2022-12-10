@@ -13,7 +13,7 @@ export default hopeTheme({
   iconAssets: 'iconfont',
   logo: '/logo.svg',
   repo: 'Sun-ZhenXing/Sun-ZhenXing.github.io',
-  docsDir: 'docs',
+  docsDir: 'src',
   pageInfo: ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime'],
   fullscreen: true,
   themeColor: {
@@ -134,6 +134,28 @@ export default hopeTheme({
       // playground: {
       //   presets: ['ts', 'vue'],
       // },
+      stylize: [
+        {
+          matcher: '@recommend',
+          replacer: ({ tag }) => {
+            if (tag === 'em') return {
+              tag: 'Badge',
+              attrs: { type: 'warning', vertical: 'middle' },
+              content: '推荐'
+            }
+          }
+        },
+        {
+          matcher: '@optional',
+          replacer: ({ tag }) => {
+            if (tag === 'em') return {
+              tag: 'Badge',
+              attrs: { type: 'tip', vertical: 'middle' },
+              content: '可选'
+            }
+          }
+        }
+      ],
       presentation: {
         plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
       },
