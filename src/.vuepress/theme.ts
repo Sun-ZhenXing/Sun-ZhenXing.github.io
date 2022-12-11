@@ -154,6 +154,16 @@ export default hopeTheme({
               content: '可选'
             }
           }
+        },
+        {
+          matcher: '@TODO',
+          replacer: ({ tag }) => {
+            if (tag === 'em') return {
+              tag: 'Badge',
+              attrs: { type: 'danger', vertical: 'middle' },
+              content: 'TODO'
+            }
+          }
         }
       ],
       presentation: {
