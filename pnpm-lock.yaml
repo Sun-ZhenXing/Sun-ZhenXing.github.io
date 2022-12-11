@@ -1536,10 +1536,10 @@ packages:
       '@jridgewell/sourcemap-codec': registry.npmmirror.com/@jridgewell/sourcemap-codec/1.4.14
     dev: true
 
-  registry.npmmirror.com/@lit/reactive-element/1.4.2:
-    resolution: {integrity: sha512-VMOxsWh/QDwrxPsgkSQnuZ+8mfNy1OTjzzUdLBvvZtpahwPTHTeVZ51RZRqO4xfKVrR+btIPA8D01IL3xeG66w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@lit/reactive-element/-/reactive-element-1.4.2.tgz}
+  registry.npmmirror.com/@lit/reactive-element/1.5.0:
+    resolution: {integrity: sha512-fQh9FDK0LPTwDk+0HhSZEtb8K0LTN1wXerwpGrWA+a8tWulYRDLI4vQDWp4GOIsewn0572KYV/oZ3+492D7osA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@lit/reactive-element/-/reactive-element-1.5.0.tgz}
     name: '@lit/reactive-element'
-    version: 1.4.2
+    version: 1.5.0
     dev: true
 
   registry.npmmirror.com/@mdit-vue/plugin-component/0.11.1:
@@ -1763,7 +1763,7 @@ packages:
     name: '@types/fs-extra'
     version: 9.0.13
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/18.11.11
+      '@types/node': registry.npmmirror.com/@types/node/18.11.13
     dev: true
 
   registry.npmmirror.com/@types/hash-sum/1.0.0:
@@ -1819,10 +1819,10 @@ packages:
     version: 17.0.45
     dev: true
 
-  registry.npmmirror.com/@types/node/18.11.11:
-    resolution: {integrity: sha512-KJ021B1nlQUBLopzZmPBVuGU9un7WJd/W4ya7Ih02B4Uwky5Nja0yGYav2EfYIk0RR2Q9oVhf60S2XR1BCWJ2g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.11.11.tgz}
+  registry.npmmirror.com/@types/node/18.11.13:
+    resolution: {integrity: sha512-IASpMGVcWpUsx5xBOrxMj7Bl8lqfuTY7FKAnPmu5cHkfQVWF8GulWS1jbRqA934qZL35xh5xN/+Xe/i26Bod4w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-18.11.13.tgz}
     name: '@types/node'
-    version: 18.11.11
+    version: 18.11.13
     dev: true
 
   registry.npmmirror.com/@types/resolve/1.17.1:
@@ -1830,7 +1830,7 @@ packages:
     name: '@types/resolve'
     version: 1.17.1
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/18.11.11
+      '@types/node': registry.npmmirror.com/@types/node/18.11.13
     dev: true
 
   registry.npmmirror.com/@types/sax/1.2.4:
@@ -2254,7 +2254,7 @@ packages:
       '@vuepress/shared': registry.npmmirror.com/@vuepress/shared/2.0.0-beta.53
       '@vuepress/utils': registry.npmmirror.com/@vuepress/utils/2.0.0-beta.53
       '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.6.0_vue@3.2.45
-      sass: registry.npmmirror.com/sass/1.56.1
+      sass: registry.npmmirror.com/sass/1.56.2
       vue: registry.npmmirror.com/vue/3.2.45
       vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.45
     transitivePeerDependencies:
@@ -2271,7 +2271,7 @@ packages:
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/9.0.13
       '@types/hash-sum': registry.npmmirror.com/@types/hash-sum/1.0.0
       '@vuepress/shared': registry.npmmirror.com/@vuepress/shared/2.0.0-beta.53
-      chalk: registry.npmmirror.com/chalk/5.1.2
+      chalk: registry.npmmirror.com/chalk/5.2.0
       debug: registry.npmmirror.com/debug/4.3.4
       fs-extra: registry.npmmirror.com/fs-extra/10.1.0
       globby: registry.npmmirror.com/globby/13.1.2
@@ -2434,7 +2434,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: registry.npmmirror.com/browserslist/4.21.4
-      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001436
+      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001439
       fraction.js: registry.npmmirror.com/fraction.js/4.2.0
       normalize-range: registry.npmmirror.com/normalize-range/0.1.2
       picocolors: registry.npmmirror.com/picocolors/1.0.0
@@ -2579,7 +2579,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001436
+      caniuse-lite: registry.npmmirror.com/caniuse-lite/1.0.30001439
       electron-to-chromium: registry.npmmirror.com/electron-to-chromium/1.4.284
       node-releases: registry.npmmirror.com/node-releases/2.0.6
       update-browserslist-db: registry.npmmirror.com/update-browserslist-db/1.0.10_browserslist@4.21.4
@@ -2623,10 +2623,10 @@ packages:
       get-intrinsic: registry.npmmirror.com/get-intrinsic/1.1.3
     dev: true
 
-  registry.npmmirror.com/caniuse-lite/1.0.30001436:
-    resolution: {integrity: sha512-ZmWkKsnC2ifEPoWUvSAIGyOYwT+keAaaWPHiQ9DfMqS1t6tfuyFYoWR78TeZtznkEQ64+vGXH9cZrElwR2Mrxg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001436.tgz}
+  registry.npmmirror.com/caniuse-lite/1.0.30001439:
+    resolution: {integrity: sha512-1MgUzEkoMO6gKfXflStpYgZDlFM7M/ck/bgfVCACO5vnAf0fXoNVHdWtqGU+MYca+4bL9Z5bpOVmR33cWW9G2A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001439.tgz}
     name: caniuse-lite
-    version: 1.0.30001436
+    version: 1.0.30001439
     dev: true
 
   registry.npmmirror.com/chalk/2.4.2:
@@ -2650,10 +2650,10 @@ packages:
       supports-color: registry.npmmirror.com/supports-color/7.2.0
     dev: true
 
-  registry.npmmirror.com/chalk/5.1.2:
-    resolution: {integrity: sha512-E5CkT4jWURs1Vy5qGJye+XwCkNj7Od3Af7CP6SujMetSMkLs8Do2RWJK5yx1wamHV/op8Rz+9rltjaTQWDnEFQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chalk/-/chalk-5.1.2.tgz}
+  registry.npmmirror.com/chalk/5.2.0:
+    resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/chalk/-/chalk-5.2.0.tgz}
     name: chalk
-    version: 5.1.2
+    version: 5.2.0
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
@@ -3714,13 +3714,13 @@ packages:
       domhandler: registry.npmmirror.com/domhandler/5.0.3
     dev: true
 
-  registry.npmmirror.com/echarts/5.4.0:
-    resolution: {integrity: sha512-uPsO9VRUIKAdFOoH3B0aNg7NRVdN7aM39/OjovjO9MwmWsAkfGyeXJhK+dbRi51iDrQWliXV60/XwLA7kg3z0w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/echarts/-/echarts-5.4.0.tgz}
+  registry.npmmirror.com/echarts/5.4.1:
+    resolution: {integrity: sha512-9ltS3M2JB0w2EhcYjCdmtrJ+6haZcW6acBolMGIuf01Hql1yrIV01L1aRj7jsaaIULJslEP9Z3vKlEmnJaWJVQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/echarts/-/echarts-5.4.1.tgz}
     name: echarts
-    version: 5.4.0
+    version: 5.4.1
     dependencies:
       tslib: registry.npmmirror.com/tslib/2.3.0
-      zrender: registry.npmmirror.com/zrender/5.4.0
+      zrender: registry.npmmirror.com/zrender/5.4.1
     dev: true
 
   registry.npmmirror.com/ejs/3.1.8:
@@ -4335,7 +4335,7 @@ packages:
     name: giscus
     version: 1.2.4
     dependencies:
-      lit: registry.npmmirror.com/lit/2.4.1
+      lit: registry.npmmirror.com/lit/2.5.0
     dev: true
 
   registry.npmmirror.com/glob-parent/5.1.2:
@@ -4809,7 +4809,7 @@ packages:
     version: 26.6.2
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/18.11.11
+      '@types/node': registry.npmmirror.com/@types/node/18.11.13
       merge-stream: registry.npmmirror.com/merge-stream/2.0.0
       supports-color: registry.npmmirror.com/supports-color/7.2.0
     dev: true
@@ -4959,26 +4959,26 @@ packages:
     name: lit-element
     version: 3.2.2
     dependencies:
-      '@lit/reactive-element': registry.npmmirror.com/@lit/reactive-element/1.4.2
-      lit-html: registry.npmmirror.com/lit-html/2.4.0
+      '@lit/reactive-element': registry.npmmirror.com/@lit/reactive-element/1.5.0
+      lit-html: registry.npmmirror.com/lit-html/2.5.0
     dev: true
 
-  registry.npmmirror.com/lit-html/2.4.0:
-    resolution: {integrity: sha512-G6qXu4JNUpY6aaF2VMfaszhO9hlWw0hOTRFDmuMheg/nDYGB+2RztUSOyrzALAbr8Nh0Y7qjhYkReh3rPnplVg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lit-html/-/lit-html-2.4.0.tgz}
+  registry.npmmirror.com/lit-html/2.5.0:
+    resolution: {integrity: sha512-bLHosg1XL3JRUcKdSVI0sLCs0y1wWrj2sqqAN3cZ7bDDPNgmDHH29RV48x6Wz3ZmkxIupaE+z7uXSZ/pXWAO1g==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lit-html/-/lit-html-2.5.0.tgz}
     name: lit-html
-    version: 2.4.0
+    version: 2.5.0
     dependencies:
       '@types/trusted-types': registry.npmmirror.com/@types/trusted-types/2.0.2
     dev: true
 
-  registry.npmmirror.com/lit/2.4.1:
-    resolution: {integrity: sha512-qohSgLiyN1cFnJG26dIiY03S4F49857A0AHQfnS0zYtnUVnD2MFvx+UT52rtXsIuNFQrnUupX+zyGSATlk1f/A==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lit/-/lit-2.4.1.tgz}
+  registry.npmmirror.com/lit/2.5.0:
+    resolution: {integrity: sha512-DtnUP6vR3l4Q8nRPPNBD+UxbAhwJPeky+OVbi3pdgMqm0g57xFSl1Sj64D1rIB+nVNdiVVg8YxB0hqKjvdadZA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lit/-/lit-2.5.0.tgz}
     name: lit
-    version: 2.4.1
+    version: 2.5.0
     dependencies:
-      '@lit/reactive-element': registry.npmmirror.com/@lit/reactive-element/1.4.2
+      '@lit/reactive-element': registry.npmmirror.com/@lit/reactive-element/1.5.0
       lit-element: registry.npmmirror.com/lit-element/3.2.2
-      lit-html: registry.npmmirror.com/lit-html/2.4.0
+      lit-html: registry.npmmirror.com/lit-html/2.5.0
     dev: true
 
   registry.npmmirror.com/lodash.debounce/4.0.8:
@@ -5005,7 +5005,7 @@ packages:
     version: 5.1.0
     engines: {node: '>=12'}
     dependencies:
-      chalk: registry.npmmirror.com/chalk/5.1.2
+      chalk: registry.npmmirror.com/chalk/5.2.0
       is-unicode-supported: registry.npmmirror.com/is-unicode-supported/1.3.0
     dev: true
 
@@ -5327,7 +5327,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       bl: registry.npmmirror.com/bl/5.1.0
-      chalk: registry.npmmirror.com/chalk/5.1.2
+      chalk: registry.npmmirror.com/chalk/5.2.0
       cli-cursor: registry.npmmirror.com/cli-cursor/4.0.0
       cli-spinners: registry.npmmirror.com/cli-spinners/2.7.0
       is-interactive: registry.npmmirror.com/is-interactive/2.0.0
@@ -5717,10 +5717,10 @@ packages:
     version: 2.1.2
     dev: true
 
-  registry.npmmirror.com/sass/1.56.1:
-    resolution: {integrity: sha512-VpEyKpyBPCxE7qGDtOcdJ6fFbcpOM+Emu7uZLxVrkX8KVU/Dp5UF7WLvzqRuUhB6mqqQt1xffLoG+AndxTZrCQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.56.1.tgz}
+  registry.npmmirror.com/sass/1.56.2:
+    resolution: {integrity: sha512-ciEJhnyCRwzlBCB+h5cCPM6ie/6f8HrhZMQOf5vlU60Y1bI1rx5Zb0vlDZvaycHsg/MqFfF1Eq2eokAa32iw8w==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.56.2.tgz}
     name: sass
-    version: 1.56.1
+    version: 1.56.2
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -6509,7 +6509,7 @@ packages:
       '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.6.0_vue@3.2.45
       balloon-css: registry.npmmirror.com/balloon-css/1.2.0
       chart.js: registry.npmmirror.com/chart.js/4.0.1
-      echarts: registry.npmmirror.com/echarts/5.4.0
+      echarts: registry.npmmirror.com/echarts/5.4.1
       flowchart.js: registry.npmmirror.com/flowchart.js/1.17.1
       juice: registry.npmmirror.com/juice/8.1.0
       katex: registry.npmmirror.com/katex/0.16.4
@@ -6649,7 +6649,7 @@ packages:
     dependencies:
       '@vuepress/utils': registry.npmmirror.com/@vuepress/utils/2.0.0-beta.53
       chokidar: registry.npmmirror.com/chokidar/3.5.3
-      sass: registry.npmmirror.com/sass/1.56.1
+      sass: registry.npmmirror.com/sass/1.56.2
       vuepress: registry.npmmirror.com/vuepress/2.0.0-beta.53_54nmke4n2vj3tdp5cd33kvtiom
       vuepress-shared: registry.npmmirror.com/vuepress-shared/2.0.0-beta.135
     transitivePeerDependencies:
@@ -7134,10 +7134,10 @@ packages:
     engines: {node: '>= 14'}
     dev: true
 
-  registry.npmmirror.com/zrender/5.4.0:
-    resolution: {integrity: sha512-rOS09Z2HSVGFs2dn/TuYk5BlCaZcVe8UDLLjj1ySYF828LATKKdxuakSZMvrDz54yiKPDYVfjdKqcX8Jky3BIA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zrender/-/zrender-5.4.0.tgz}
+  registry.npmmirror.com/zrender/5.4.1:
+    resolution: {integrity: sha512-M4Z05BHWtajY2241EmMPHglDQAJ1UyHQcYsxDNzD9XLSkPDqMq4bB28v9Pb4mvHnVQ0GxyTklZ/69xCFP6RXBA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zrender/-/zrender-5.4.1.tgz}
     name: zrender
-    version: 5.4.0
+    version: 5.4.1
     dependencies:
       tslib: registry.npmmirror.com/tslib/2.3.0
     dev: true
