@@ -1,6 +1,6 @@
 ---
 title: 博客编写示例
-date: 2020-12-04
+date: 2022-12-04
 category:
   - 元定义
 tag:

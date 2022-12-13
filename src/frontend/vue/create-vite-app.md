@@ -1,6 +1,6 @@
 ---
 title: 创建 Vue3 + Vite 项目
-date: 2020-12-04
+date: 2022-12-08
 category:
   - 前端
   - Vue

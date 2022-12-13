@@ -1,6 +1,6 @@
 ---
 title: IEEE 754 浮点数交互式演示
-date: 2020-12-10
+date: 2022-12-10
 category:
   - 前端
   - Awesome
