@@ -1,6 +1,6 @@
 ---
 home: true
-layout: Blog
+layout: BlogHome
 icon: home
 title: 鸭梨
 heroImage: /logo.svg
