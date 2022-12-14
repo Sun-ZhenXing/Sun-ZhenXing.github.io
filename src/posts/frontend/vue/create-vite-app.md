@@ -237,7 +237,7 @@ export const useAppStore = defineStore({
 })
 ```
 
-【可选】创建用户存储，创建 `src/store/user.ts`：
+*@optional* 创建用户存储，创建 `src/store/user.ts`：
 
 ```ts
 import { defineStore } from 'pinia'

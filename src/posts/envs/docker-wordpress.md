@@ -1,6 +1,6 @@
 ---
 title: Docker 搭建 WordPress 指南
-date: 2022-12-04
+date: 2022-12-13
 category:
   - 环境搭建
 tag:
@@ -28,6 +28,7 @@ docker container run \
   mysql:5.7
 
 # 安装 WordPress，把文件保存在当前路径的 ./wordpress 路径下
+# 将 8081 可以改为你需要暴露的端口
 docker container run \
   -d \
   -p 8081:80 \
@@ -46,7 +47,7 @@ define( 'DB_USER', getenv_docker('WORDPRESS_DB_USER', 'root') );
 define( 'DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', '123456') );
 ```
 
-打开即可使用。
+打开地址即可即可使用 WordPress。
 
 ## 2. 修改最大上传限制
 
@@ -80,15 +81,19 @@ exit
 sudo docker restart wordpress
 ```
 
-## 3. WordPress 容器没有安装 `vim`
+现在已经配置完成了，打开地址即可访问，上传限制也可以该为你设定的其他值。
 
-进入镜像：
+## 3. WordPress 容器内安装 `vim`
+
+不建议更改容器内的设定，如果你一定需要的话可以按照下面设定进行：
+
+进入容器：
 
 ```bash
 sudo docker exec -it wordpress /bin/bash
 ```
 
-下面的操作都在镜像中进行。
+下面的操作都在容器中进行。
 
 先修改软件镜像源，可以使用下面的命令修改为清华源：
 
