@@ -12,8 +12,6 @@ tag:
 
 <!-- more -->
 
-# Docker 搭建 WordPress
-
 ## 1. Docker 创建容器
 
 确保已经安装 Docker，如果没有安装请搜索在你的系统上安装 Docker，当前测试系统是 Debian 11.5。

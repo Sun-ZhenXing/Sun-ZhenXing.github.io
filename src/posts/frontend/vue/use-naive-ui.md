@@ -15,8 +15,6 @@ tag:
 
 <!-- more -->
 
-# 开始使用 Naive UI
-
 [[TOC]]
 
 ## 1. Naive UI

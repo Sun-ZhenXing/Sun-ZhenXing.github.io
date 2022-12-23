@@ -12,8 +12,6 @@ tag:
 
 <!-- more -->
 
-# VS Code 配置 C++ CMake 开发环境
-
 [[TOC]]
 
 ## 1. 安装后端

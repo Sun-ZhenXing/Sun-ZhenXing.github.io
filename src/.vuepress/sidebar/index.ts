@@ -13,12 +13,28 @@ export const Sidebar = sidebar({
           children: 'structure'
         },
         {
+          prefix: 'backend/',
+          text: '后端',
+          children: [
+            {
+              prefix: 'history/',
+              text: '历史',
+              children: 'structure'
+            }
+          ]
+        },
+        {
           prefix: 'frontend/',
           text: '前端',
           children: [
             {
               prefix: 'vue/',
               text: 'Vue',
+              children: 'structure'
+            },
+            {
+              prefix: 'history/',
+              text: '历史',
               children: 'structure'
             },
             {

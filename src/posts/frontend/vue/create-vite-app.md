@@ -15,8 +15,6 @@ tag:
 
 <!-- more -->
 
-# 创建 Vue3 + Vite 项目
-
 [[TOC]]
 
 ::: warning Node.js 版本
