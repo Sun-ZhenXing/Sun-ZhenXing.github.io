@@ -1,57 +1,70 @@
 import { sidebar } from 'vuepress-theme-hope'
 
 export const Sidebar = sidebar({
-  '/': [
+  '/envs/': [
     {
-      text: '文章',
-      icon: 'home',
-      prefix: 'posts/',
+      text: '环境搭建',
+      icon: 'setting',
+      children: 'structure',
+    },
+    '/intro'
+  ],
+  '/backend/': [
+    {
+      text: '后端',
+      icon: 'setting',
       children: [
         {
-          prefix: 'envs/',
-          text: '环境搭建',
+          prefix: 'history/',
+          collapsible: true,
+          text: '历史',
+          children: 'structure'
+        }
+      ]
+    },
+    '/intro'
+  ],
+  '/frontend/': [
+    {
+      text: '前端',
+      icon: 'setting',
+      children: [
+        {
+          prefix: 'vue/',
+          collapsible: true,
+          text: 'Vue',
           children: 'structure'
         },
         {
-          prefix: 'backend/',
-          text: '后端',
-          children: [
-            {
-              prefix: 'history/',
-              text: '历史',
-              children: 'structure'
-            }
-          ]
+          prefix: 'history/',
+          collapsible: true,
+          text: '历史',
+          children: 'structure'
         },
         {
-          prefix: 'frontend/',
-          text: '前端',
-          children: [
-            {
-              prefix: 'vue/',
-              text: 'Vue',
-              children: 'structure'
-            },
-            {
-              prefix: 'history/',
-              text: '历史',
-              children: 'structure'
-            },
-            {
-              prefix: 'awesome/',
-              text: 'Awesome 项目',
-              children: 'structure'
-            }
-          ]
-        },
+          prefix: 'awesome/',
+          collapsible: true,
+          text: 'Awesome 项目',
+          children: 'structure'
+        }
       ]
     },
+    '/intro'
+  ],
+  '/meta/': [
     {
       text: '元设置',
       icon: 'setting',
-      prefix: 'meta/',
-      children: 'structure'
+      children: 'structure',
     },
-    'intro'
+    '/intro'
+  ],
+  '/': [
+    {
+      text: '元设置',
+      icon: 'setting',
+      children: 'structure',
+    },
+    '/intro',
   ]
 })
