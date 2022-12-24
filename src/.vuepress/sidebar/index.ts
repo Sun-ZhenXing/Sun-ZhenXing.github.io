@@ -59,6 +59,10 @@ export const Sidebar = sidebar({
     },
     '/intro'
   ],
+  '/intro': [
+    '/intro',
+    '/slides'
+  ],
   '/': [
     {
       text: '元设置',
