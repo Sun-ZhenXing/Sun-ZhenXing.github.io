@@ -1,5 +1,7 @@
 # 我的个人博客
 
+![](https://img.shields.io/github/actions/workflow/status/Sun-ZhenXing/Sun-ZhenXing.github.io/deploy-docs.yml?branch=main)
+
 地址：<https://blog.alexsun.top/>，项目主页包含一些子项目的合集，强烈建议查看，包括：
 - OpenCV 笔记合集
 - 计算机网络笔记合集
