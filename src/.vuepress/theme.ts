@@ -121,16 +121,13 @@ export default hopeTheme({
       echarts: false,
       flowchart: false,
       gfm: true,
-      imageLazyload: true,
+      imgLazyload: true,
       figure: true,
-      imageSize: true,
+      imgSize: true,
       include: true,
       katex: true,
       mark: true,
       mermaid: true,
-      // playground: {
-      //   presets: ['ts', 'vue'],
-      // },
       stylize: [
         {
           matcher: '@recommend',

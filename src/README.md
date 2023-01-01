@@ -31,5 +31,9 @@ projects:
     name: 工具笔记
     desc: 工具笔记合集
     link: https://blog.alexsun.top/vuepress-tools-notes/
+  - icon: structure
+    name: 数据结构和算法笔记
+    desc: 数据结构和算法笔记合集
+    link: https://blog.alexsun.top/vuepress-data-structure/
 footer: 鸭梨的博客网站
 ---
