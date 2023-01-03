@@ -13,15 +13,15 @@ tagline: 元气满满的一天鸭
 projects:
   - icon: geometry
     name: OpenCV 笔记
-    desc: OpenCV 各类笔记合集
+    desc: OpenCV 相关笔记
     link: https://blog.alexsun.top/vuepress-opencv-notes/
   - icon: book
     name: 嵌入式笔记
-    desc: 嵌入式笔记合集
+    desc: 嵌入式相关笔记
     link: https://blog.alexsun.top/vuepress-embedded-notes/
   - icon: network
     name: 计算机网络笔记
-    desc: 计算机网络笔记合集
+    desc: 计网笔记合集
     link: https://blog.alexsun.top/vuepress-network-notes/
   - icon: module
     name: 数据库笔记
@@ -29,11 +29,11 @@ projects:
     link: https://blog.alexsun.top/vuepress-database-notes/
   - icon: tool
     name: 工具笔记
-    desc: 工具笔记合集
+    desc: 各类工具笔记
     link: https://blog.alexsun.top/vuepress-tools-notes/
   - icon: structure
-    name: 数据结构和算法笔记
-    desc: 数据结构和算法笔记合集
+    name: 数据结构和算法
+    desc: 数据结构和算法笔记
     link: https://blog.alexsun.top/vuepress-data-structure/
 footer: 鸭梨的博客网站
 ---
