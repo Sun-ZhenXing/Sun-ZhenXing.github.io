@@ -69,9 +69,9 @@ export default hopeTheme({
       footer: '鸭梨的博客',
       displayFooter: true,
       navbarLayout: {
-        left: ['Brand'],
+        start: ['Brand'],
         center: ['Links'],
-        right: ['Repo', 'Outlook', 'Search']
+        end: ['Repo', 'Outlook', 'Search']
       },
       blog: {
         name: '鸭梨',

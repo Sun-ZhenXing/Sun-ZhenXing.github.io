@@ -2,9 +2,14 @@ type Projects = { items: string[] }
 
 const projects: Projects = {
   items: [
-    'https://blog.alexsun.top/vuepress-network-notes/',
-    'https://blog.alexsun.top/vuepress-embedded-notes/',
-    'https://blog.alexsun.top/vuepress-network-notes/'
+    '/vuepress-data-structure/',
+    '/vuepress-database-notes/',
+    '/vuepress-embedded-notes/',
+    '/vuepress-frontend-notes/',
+    '/vuepress-network-notes/',
+    '/vuepress-opencv-notes/',
+    '/vuepress-solid-template/',
+    '/vuepress-tools-notes/',
   ]
 }
 
