@@ -43,6 +43,10 @@ projects:
     name: Python 笔记
     desc: Python 笔记合集
     link: https://blog.alexsun.top/vuepress-python-notes/
+  - icon: c
+    name: C++ 笔记
+    desc: C++ 笔记合集
+    link: https://blog.alexsun.top/vuepress-cpp-notes/
 footer: 鸭梨的博客网站
 ---
 
