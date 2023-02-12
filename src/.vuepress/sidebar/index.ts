@@ -61,6 +61,7 @@ export const Sidebar = sidebar({
   ],
   '/intro': [
     '/intro',
+    '/meta',
     '/slides'
   ],
   '/': [
