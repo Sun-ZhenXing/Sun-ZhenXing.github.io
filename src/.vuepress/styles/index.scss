@@ -34,3 +34,12 @@ code {
     box-shadow: 0 0 0 0.1rem rgb(87 85 217 / 20%);
   }
 }
+
+// 主页背景
+:root {
+  --bg-image-style: url(/bg.svg), linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+html[data-theme=dark] {
+  --bg-image-style: url(/bg.svg), linear-gradient(120deg, #634520 0%, #6e2e7e 100%);
+}

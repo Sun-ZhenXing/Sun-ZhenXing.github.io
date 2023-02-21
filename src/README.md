@@ -6,7 +6,7 @@ title: 鸭梨
 heroImage: /logo.svg
 bgImage: /bg.svg
 bgImageStyle:
-  background-image: 'url(/bg.svg), linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)'
+  background-image: var(--bg-image-style)
 heroText: 鸭梨的博客
 heroFullScreen: true
 tagline: 元气满满的一天鸭

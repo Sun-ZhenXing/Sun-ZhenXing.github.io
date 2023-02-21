@@ -128,6 +128,7 @@ export default hopeTheme({
       katex: true,
       mark: true,
       mermaid: true,
+      footnote: true,
       stylize: [
         {
           matcher: '@recommend',
