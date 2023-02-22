@@ -1,15 +1,15 @@
 import { sidebar } from 'vuepress-theme-hope'
 
 export const Sidebar = sidebar({
-  '/envs/': [
+  '/posts/envs/': [
     {
       text: '环境搭建',
       icon: 'setting',
       children: 'structure',
     },
-    '/intro'
+    '/posts/intro'
   ],
-  '/backend/': [
+  '/posts/backend/': [
     {
       text: '后端',
       icon: 'setting',
@@ -22,9 +22,9 @@ export const Sidebar = sidebar({
         }
       ]
     },
-    '/intro'
+    '/posts/intro'
   ],
-  '/frontend/': [
+  '/posts/frontend/': [
     {
       text: '前端',
       icon: 'setting',
@@ -49,19 +49,19 @@ export const Sidebar = sidebar({
         }
       ]
     },
-    '/intro'
+    '/posts/intro'
   ],
-  '/meta/': [
+  '/posts/meta/': [
     {
       text: '元设置',
       icon: 'setting',
       children: 'structure',
     },
-    '/intro'
+    '/posts/intro'
   ],
-  '/intro': [
-    '/intro',
-    '/meta',
+  '/posts/intro': [
+    '/posts/intro',
+    '/posts/meta',
     '/slides'
   ],
   '/': [
@@ -70,6 +70,6 @@ export const Sidebar = sidebar({
       icon: 'setting',
       children: 'structure',
     },
-    '/intro',
+    '/posts/intro',
   ]
 })

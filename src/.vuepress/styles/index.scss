@@ -43,3 +43,8 @@ code {
 html[data-theme=dark] {
   --bg-image-style: url(/bg.svg), linear-gradient(120deg, #634520 0%, #6e2e7e 100%);
 }
+
+// Badge 元素样式
+.badge {
+  vertical-align: inherit;
+}
