@@ -46,6 +46,12 @@ export const Sidebar = sidebar({
           collapsible: true,
           text: 'Awesome 项目',
           children: 'structure'
+        },
+        {
+          prefix: 'android/',
+          collapsible: true,
+          text: 'Android',
+          children: 'structure'
         }
       ]
     },
