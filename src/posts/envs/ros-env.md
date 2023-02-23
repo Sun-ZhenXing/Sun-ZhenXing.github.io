@@ -142,3 +142,5 @@ rosrun turtlesim turtlesim_node
 ```bash
 rosrun turtlesim  turtle_teleop_key
 ```
+
+根据指示，通过键盘控制小海龟移动。
