@@ -24,7 +24,7 @@ export default defineUserConfig({
   plugins: [
     docsearchPlugin({
       appId: 'DF0MWQNCKW',
-      apiKey: 'fde5c0f2e0052f31234eb16cbb3dfcc3',
+      apiKey: '3b6438cb1895eff367c5c84c8fa50383',
       indexName: 'alexsun_blog',
       placeholder: '搜索文档',
       translations: {
