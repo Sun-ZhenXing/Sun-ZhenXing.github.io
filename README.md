@@ -30,3 +30,9 @@ pnpm dev
 仓库的非 MarkDown（`*.md`）代码都使用 [**MIT 协议**](https://mit-license.org/) 开源，可用于商业或其他分发方式。
 
 而 MarkDown 代码（即笔记和知识总结）是以 [**CC-BY-NC-SA 4.0 协议**](https://creativecommons.org/licenses/by-nc-sa/4.0/) 授权的。即如 果你需要共享的是知识（MarkDown 的内容）而不是代码则需要保留源链接、作者信息，并且也不能用于商业。
+
+鸭梨 Logo 如下：
+
+<img src="./src/.vuepress/dist/logo.svg" style="width: 64px" />
+
+鸭梨 Logo 为原创设计，受到版权法保护，任何个人、组织和公司等不得以任何方式使用，引用 Logo 需要得到作者本人授权，如需要请通过上述博客主页提供的联系方式联系作者。
