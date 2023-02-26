@@ -47,6 +47,10 @@ projects:
     name: C++ 笔记
     desc: C++ 笔记合集
     link: https://blog.alexsun.top/vuepress-cpp-notes/
+  - icon: stack
+    name: 后端笔记
+    desc: 后端笔记合集
+    link: https://blog.alexsun.top/vuepress-backend-notes/
 footer: 鸭梨的博客网站
 ---
 
