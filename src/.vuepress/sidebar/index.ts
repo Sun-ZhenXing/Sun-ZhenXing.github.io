@@ -9,6 +9,21 @@ export const Sidebar = sidebar({
     },
     '/posts/intro'
   ],
+  '/posts/ai/': [
+    {
+      text: '人工智能',
+      icon: 'creative',
+      children: [
+        {
+          prefix: 'probability-and-statistics/',
+          collapsible: true,
+          text: '概率与统计',
+          children: 'structure'
+        }
+      ]
+    },
+    '/posts/intro'
+  ],
   '/posts/backend/': [
     {
       text: '后端',
@@ -18,6 +33,12 @@ export const Sidebar = sidebar({
           prefix: 'history/',
           collapsible: true,
           text: '历史',
+          children: 'structure'
+        },
+        {
+          prefix: 'tech/',
+          collapsible: true,
+          text: '技术',
           children: 'structure'
         }
       ]

@@ -135,7 +135,7 @@ export default hopeTheme({
           replacer: ({ tag }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'warning', vertical: 'middle' },
+              attrs: { type: 'warning', vertical: 'inherit' },
               content: '推荐'
             }
           }
@@ -145,7 +145,7 @@ export default hopeTheme({
           replacer: ({ tag }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'tip', vertical: 'middle' },
+              attrs: { type: 'tip', vertical: 'inherit' },
               content: '可选'
             }
           }
@@ -155,8 +155,18 @@ export default hopeTheme({
           replacer: ({ tag }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'danger', vertical: 'middle' },
+              attrs: { type: 'danger', vertical: 'inherit' },
               content: 'TODO'
+            }
+          }
+        },
+        {
+          matcher: '@def',
+          replacer: ({ tag }) => {
+            if (tag === 'em') return {
+              tag: 'Badge',
+              attrs: { type: 'tip', vertical: 'inherit' },
+              content: '定义'
             }
           }
         }
