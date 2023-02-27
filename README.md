@@ -33,6 +33,6 @@ pnpm dev
 
 鸭梨 Logo 如下：
 
-<img src="./src/.vuepress/dist/logo.svg" style="width: 64px" />
+<img src="https://github.com/Sun-ZhenXing/Sun-ZhenXing.github.io/raw/main/src/.vuepress/public/logo.svg" style="width: 64px" />
 
 鸭梨 Logo 为原创设计，受到版权法保护，任何个人、组织和公司等不得以任何方式使用，引用 Logo 需要得到作者本人授权，如需要请通过上述博客主页提供的联系方式联系作者。
