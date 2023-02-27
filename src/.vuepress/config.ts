@@ -27,6 +27,9 @@ export default defineUserConfig({
       apiKey: '3b6438cb1895eff367c5c84c8fa50383',
       indexName: 'alexsun_blog',
       placeholder: '搜索文档',
+      searchParameters: {
+        facetFilters: ['tags:blog'],
+      },
       locales: {
         '/': {
           placeholder: '搜索文档',

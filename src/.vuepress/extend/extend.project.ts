@@ -2,6 +2,8 @@ type Projects = { items: string[] }
 
 const projects: Projects = {
   items: [
+    '/vuepress-backend-notes/',
+    '/vuepress-cpp-notes/',
     '/vuepress-data-structure/',
     '/vuepress-database-notes/',
     '/vuepress-embedded-notes/',
