@@ -1,5 +1,5 @@
 ---
-title: SVD 分解
+title: SVD：奇异值分解
 date: 2023-02-27
 category:
   - AI

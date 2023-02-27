@@ -1,38 +1,9 @@
 // 此处存放自定义全局样式
 
-// 代码块样式，默认 code 过膨胀
+// 代码样式
 code {
   // padding: 0.25rem 0.5rem;
   padding: 0.15rem 0.15rem;
-}
-
-// 自定义输入框样式
-.my-input {
-  label {
-    display: block;
-    line-height: 1.2rem;
-    padding: .3rem 0;
-  }
-
-  input {
-    appearance: none;
-    border: .05rem solid var(--note-border-color);
-    border-radius: .1rem;
-    color: var(--text-color);
-    display: block;
-    font-size: .8rem;
-    height: 1.8rem;
-    line-height: 1.2rem;
-    padding: .25rem .4rem;
-    outline: 0;
-    transition: border .2s, box-shadow .2s, color .2s;
-    width: 100%;
-  }
-
-  input:focus {
-    border-color: var(--theme-color);
-    box-shadow: 0 0 0 0.1rem rgb(87 85 217 / 20%);
-  }
 }
 
 // 主页背景
@@ -44,7 +15,16 @@ html[data-theme=dark] {
   --bg-image-style: url(/bg.svg), linear-gradient(120deg, #634520 0%, #6e2e7e 100%);
 }
 
-// Badge 元素样式
-.badge {
-  vertical-align: inherit;
+// 复制代码时指定为 LaTeX
+.katex {
+  * {
+    user-select: none;
+  }
+
+  annotation {
+    user-select: all;
+  }
 }
+
+@import 'print.scss';
+@import 'private.scss';
