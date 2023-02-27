@@ -19,6 +19,12 @@ export const Sidebar = sidebar({
           collapsible: true,
           text: '概率与统计',
           children: 'structure'
+        },
+        {
+          prefix: 'linear-algebra/',
+          collapsible: true,
+          text: '线性代数',
+          children: 'structure'
         }
       ]
     },
