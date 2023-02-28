@@ -21,6 +21,12 @@ export const Sidebar = sidebar({
           children: 'structure'
         },
         {
+          prefix: 'machine-learning',
+          collapsible: true,
+          text: '机器学习',
+          children: 'structure'
+        },
+        {
           prefix: 'linear-algebra/',
           collapsible: true,
           text: '线性代数',
