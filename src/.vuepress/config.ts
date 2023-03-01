@@ -1,6 +1,9 @@
 import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
+import { getDirname, path } from "@vuepress/utils"
 import theme from './theme.js'
+
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   base: '/',
@@ -75,6 +78,11 @@ export default defineUserConfig({
       },
     })
   ],
-
+  alias: {
+    '@': path.resolve(
+      __dirname,
+      '.',
+    )
+  },
   shouldPrefetch: false,
 })
