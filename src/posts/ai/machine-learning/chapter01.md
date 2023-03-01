@@ -15,6 +15,12 @@ tag:
 
 [[TOC]]
 
+::: info 课程信息
+
+2022 吴恩达机器学习，[GitHub](https://github.com/kaieye/2022-Machine-Learning-Specialization)，包含配套视频和代码。
+
+:::
+
 ## 1. 机器学习定义
 
 Arthur Samuel 在 1959 年给机器学习的定义是：让机器在没有明确编程的情况下进行学习。
