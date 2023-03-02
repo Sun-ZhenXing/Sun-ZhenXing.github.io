@@ -17,10 +17,6 @@ html[data-theme=dark] {
 
 // 复制代码时指定为 LaTeX
 .katex {
-  * {
-    user-select: none;
-  }
-
   annotation {
     user-select: all;
   }

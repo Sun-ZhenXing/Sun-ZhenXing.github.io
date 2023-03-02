@@ -118,7 +118,7 @@ export default hopeTheme({
       codetabs: true,
       container: true,
       demo: false,
-      echarts: false,
+      echarts: true,
       flowchart: false,
       gfm: true,
       imgLazyload: true,
