@@ -97,3 +97,108 @@ $$
 ### 1.2 行列式（Determinant）
 
 设 $\boldsymbol{A}$ 是一个 $n \times n$ 方阵。
+
+$$
+\begin{align}
+  \det(\boldsymbol{A}) &= \prod_i \lambda_i, \quad \lambda_i = \mathrm{eig}(\boldsymbol{A}) \\
+  \det(c\boldsymbol{A}) &= c^n\det(\boldsymbol{\boldsymbol{A}}), \quad \text{if } \boldsymbol{A} \in \R^{n \times n} \\
+  \det(\boldsymbol{A}^{\mathsf{T}}) &= \det(\boldsymbol{A}) \\
+  \det(\boldsymbol{AB}) &= \det(\boldsymbol{A})\det(\boldsymbol{B}) \\
+  \det(\boldsymbol{A}^{-1}) &= 1 / \det(\boldsymbol{A}) \\
+  \det(\boldsymbol{A}^n) &= \det(\boldsymbol{A})^n \\
+  \det(\boldsymbol{I} + \boldsymbol{uv}^{\mathsf{T}}) &= 1 + \boldsymbol{u}^{\mathsf{T}}\boldsymbol{v}
+\end{align}
+$$
+
+当 $n = 2$ 时：
+
+$$
+\begin{align}
+  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A})  
+\end{align}
+$$
+
+当 $n = 3$ 时：
+
+$$
+\begin{align}
+  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})^2 - \frac{1}{2}\mathrm{Tr}(\boldsymbol{A}^2)
+\end{align}
+$$
+
+当 $n = 4$ 时：
+
+$$
+\begin{align}
+  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2} + \mathrm{Tr}(\boldsymbol{A})^2 - \frac{1}{2}\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{6}\mathrm{Tr}(\boldsymbol{A})^3 - \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{3}\mathrm{Tr}(\boldsymbol{A}^3)
+\end{align}
+$$
+
+对于小的数 $\varepsilon$，下面的近似成立
+
+$$
+\begin{align}
+  \det(\boldsymbol{I} + \varepsilon\boldsymbol{A}) &\cong
+  1 + \det(\boldsymbol{A}) + \varepsilon\mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2}\varepsilon^2\mathrm{Tr}(\boldsymbol{A})^2 - \frac{1}{2}\varepsilon^2\mathrm{Tr}(\boldsymbol{A}^2)
+\end{align}
+$$
+
+### 1.3 2x2 的特殊情况
+
+考虑矩阵 $\boldsymbol{A}$
+
+$$
+\boldsymbol{A} = \begin{bmatrix}
+  A_{11} & A_{12} \\
+  A_{21} & A_{22}
+\end{bmatrix}
+$$
+
+行列式和迹
+
+$$
+\begin{align}
+  \det(\boldsymbol{A}) &= A_{11}A_{22} - A_{12}A_{21} \\
+  \mathrm{Tr}(\boldsymbol{A}) &= A_{11} + A_{22}
+\end{align}
+$$
+
+特征值
+
+$$
+\begin{aligned}
+  \lambda_1 &= \frac{\mathrm{Tr}(\boldsymbol{A}) + \sqrt{\mathrm{Tr}(\boldsymbol{A})^2 - 4\det(\boldsymbol{A})}}{2} \\
+\lambda_2 &= \frac{\mathrm{Tr}(\boldsymbol{A}) - \sqrt{\mathrm{Tr}(\boldsymbol{A})^2 - 4\det(\boldsymbol{A})}}{2}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  \lambda_1 + \lambda_2 &= \mathrm{Tr}(\boldsymbol{A}) \\
+  \lambda_1\lambda_2 &= \det(\boldsymbol{A})
+\end{aligned}
+$$
+
+特征向量
+
+$$
+\begin{aligned}
+  \boldsymbol{v}_1 &\propto \begin{bmatrix}
+    A_{12} \\
+    \lambda_1 - A_{11}
+  \end{bmatrix} \\
+  \boldsymbol{v}_2 &\propto \begin{bmatrix}
+    A_{12} \\
+    \lambda_2 - A_{12}
+  \end{bmatrix}
+\end{aligned}
+$$
+
+$$
+\begin{align}
+  \boldsymbol{A}^{-1} &= \frac{1}{\det(\boldsymbol{A})}\begin{bmatrix}
+    A_{22} & -A_{12} \\
+    -A_{21} & A_{11}
+  \end{bmatrix}
+\end{align}
+$$
