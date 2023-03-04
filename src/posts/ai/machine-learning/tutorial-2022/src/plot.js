@@ -1,13 +1,16 @@
-// 需要绘制的函数曲线
 /**
+ * 需要绘制的函数
  * @param {number} x
  */
 function func(x) {
   return (x - 1) ** 2;
 }
-// 产生数据
+
+/**
+ * 产生数据
+ */
 function generateData() {
-  let data = [];
+  const data = [];
   for (let i = -4; i <= 6; i += 0.05) {
     data.push([
       parseFloat(i.toFixed(5)),

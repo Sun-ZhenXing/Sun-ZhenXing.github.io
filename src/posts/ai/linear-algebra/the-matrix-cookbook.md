@@ -129,9 +129,13 @@ $$
 当 $n = 4$ 时：
 
 $$
-\begin{align}
-  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2} + \mathrm{Tr}(\boldsymbol{A})^2 - \frac{1}{2}\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{6}\mathrm{Tr}(\boldsymbol{A})^3 - \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{3}\mathrm{Tr}(\boldsymbol{A}^3)
-\end{align}
+\begin{equation}
+  \begin{aligned}
+    \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2} + \mathrm{Tr}(\boldsymbol{A})^2 & \\
+    &- \frac{1}{2}\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{6}\mathrm{Tr}(\boldsymbol{A})^3 \\
+    &- \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{3}\mathrm{Tr}(\boldsymbol{A}^3)    
+  \end{aligned}
+\end{equation}
 $$
 
 对于小的数 $\varepsilon$，下面的近似成立
