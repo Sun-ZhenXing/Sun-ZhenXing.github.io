@@ -1,5 +1,3 @@
-// 此处存放自定义全局样式
-
 // 代码样式
 code {
   // padding: 0.25rem 0.5rem;
@@ -12,7 +10,7 @@ code {
 }
 
 html[data-theme=dark] {
-  --bg-image-style: url(/bg.svg), linear-gradient(120deg, #634520 0%, #6e2e7e 100%);
+  --bg-image-style: url(/bg.svg), linear-gradient(120deg, #6441A5 0%, #2a0845 100%);
 }
 
 // 复制代码时指定为 LaTeX
