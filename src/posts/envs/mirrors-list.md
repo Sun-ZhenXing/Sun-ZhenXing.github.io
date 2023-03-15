@@ -17,8 +17,10 @@ tag:
 
 ### 1.1 Ubuntu 镜像
 
+推荐：[官方镜像列表](https://launchpad.net/ubuntu/+cdmirrors)。
+
 推荐镜像列表：
-1. [Ubuntu 官方镜像下载地址](https://ubuntu.com/download)
+1. [Ubuntu 官方镜像](https://ubuntu.com/download)
 2. [清华大学镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/)
 3. [华为云镜像](https://repo.huaweicloud.com/ubuntu-releases/)
 4. [阿里云镜像](https://mirrors.aliyun.com/ubuntu-releases/)
@@ -28,14 +30,199 @@ tag:
 8. [中国科学技术大学镜像](https://mirrors.ustc.edu.cn/ubuntu-releases/)
 9. [腾讯镜像](https://mirrors.cloud.tencent.com/ubuntu-releases/)
 
-第三方列表合集：
-1. [官方 Ubuntu 镜像列表：launchpad.net](https://launchpad.net/ubuntu/+cdmirrors)（有超过 400 个地址，包括许多国家）
+### 1.2 Debian 镜像
+
+| 名称                      | 后缀                |
+| ------------------------- | ------------------- |
+| Debian 安装源             | `debian-cd`         |
+| Debian 安全更新源         | `debian-security`   |
+| Debian 第三方多媒体软件源 | `debian-multimedia` |
+| Debian 预发软件源         | `debian-backports`  |
+| Debian 其他架构移植源     | `debian-ports`      |
+| Debian 过期源             | `debian-archive`    |
+
+推荐：[官方镜像列表](https://www.debian.org/CD/http-ftp/)。
+
+推荐镜像列表：
+1. [Debian 官方镜像](https://www.debian.org/CD/http-ftp/)
+2. [清华大学镜像](https://mirrors.tuna.tsinghua.edu.cn/debian-cd/)
+3. [阿里云镜像](https://mirrors.aliyun.com/debian-cd/)
 
 ## 2. 系统软件源镜像
 
 ### 2.1 Ubuntu 镜像源
 
 ### 2.2 Debian 镜像源
+
+Debian 使用 APT 作为包管理器，配置文件在保存在 `/etc/apt/sources.list` 中。
+
+```bash
+mv /etc/apt/sources.list /etc/apt/sources.list-bak
+echo '...' > /etc/apt/sources.list
+```
+
+此处不推荐使用非官方的安全更新，具体原因可参考 [Debian: FAQ](https://www.debian.org/security/faq.en.html#mirror)。如果你想将镜像源的安全更新改为官方地址，请保留官方的 `*-security` 条目。
+
+参考链接：
+- 清华大学：<https://mirrors.tuna.tsinghua.edu.cn/help/debian/>
+- 阿里云：<https://mirrors.tuna.tsinghua.edu.cn/help/debian/>
+
+#### Debian 12 (bookworm)
+
+::: code-tabs#source
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+
+# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+```
+
+@tab 阿里云
+
+```bash
+
+```
+
+:::
+
+#### Debian 11 (bullseye)
+
+::: code-tabs#source
+
+@tab 官方源
+
+```bash
+
+```
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+
+# deb https://security.debian.org/debian-security bullseye-security main contrib non-free
+# # deb-src https://security.debian.org/debian-security bullseye-security main contrib non-free
+```
+
+@tab 阿里云
+
+```bash
+deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
+
+deb https://mirrors.aliyun.com/debian-security/ bullseye-security main
+# deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main
+
+deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
+
+deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
+```
+
+:::
+
+#### Debian 10 (buster)
+
+::: code-tabs#source
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
+
+# deb https://security.debian.org/debian-security buster/updates main contrib non-free
+# # deb-src https://security.debian.org/debian-security buster/updates main contrib non-free
+```
+
+@tab 阿里云
+
+```bash
+deb https://mirrors.aliyun.com/debian/ buster main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ buster main non-free contrib
+
+deb https://mirrors.aliyun.com/debian-security buster/updates main
+# deb-src https://mirrors.aliyun.com/debian-security buster/updates main
+
+deb https://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
+
+deb https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
+```
+
+:::
+
+#### Debian 9 (stretch)
+
+::: code-tabs#source
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main contrib non-free
+
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free
+
+# deb https://security.debian.org/debian-security stretch/updates main contrib non-free
+# # deb-src https://security.debian.org/debian-security stretch/updates main contrib non-free
+```
+
+@tab 阿里云
+
+```bash
+deb https://mirrors.aliyun.com/debian/ stretch main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ stretch main non-free contrib
+
+deb https://mirrors.aliyun.com/debian-security stretch/updates main
+# deb-src https://mirrors.aliyun.com/debian-security stretch/updates main
+
+deb https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
+# deb-src https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
+```
+
+:::
 
 ## 3. PyPI 镜像
 
