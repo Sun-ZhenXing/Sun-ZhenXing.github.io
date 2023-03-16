@@ -71,6 +71,14 @@ echo '...' > /etc/apt/sources.list
 
 ::: code-tabs#source
 
+@tab 官方源
+
+```bash
+deb http://deb.debian.org/debian bookworm main
+deb http://deb.debian.org/debian-security bookworm-security main
+deb http://deb.debian.org/debian bookworm-updates main
+```
+
 @tab 清华大学
 
 ```bash
@@ -105,7 +113,9 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 @tab 官方源
 
 ```bash
-
+deb http://deb.debian.org/debian bullseye main
+deb http://deb.debian.org/debian-security bullseye-security main
+deb http://deb.debian.org/debian bullseye-updates main
 ```
 
 @tab 清华大学
@@ -149,6 +159,14 @@ deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
 
 ::: code-tabs#source
 
+@tab 官方源
+
+```bash
+deb http://deb.debian.org/debian buster main
+deb http://deb.debian.org/debian-security buster-security main
+deb http://deb.debian.org/debian buster-updates main
+```
+
 @tab 清华大学
 
 ```bash
@@ -189,6 +207,14 @@ deb https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
 #### Debian 9 (stretch)
 
 ::: code-tabs#source
+
+@tab 官方源
+
+```bash
+deb http://deb.debian.org/debian stretch main
+deb http://deb.debian.org/debian-security stretch-security main
+deb http://deb.debian.org/debian stretch-updates main
+```
 
 @tab 清华大学
 

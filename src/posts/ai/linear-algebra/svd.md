@@ -1,5 +1,5 @@
 ---
-title: SVD：奇异值分解
+title: 矩阵分解：EVD 和 SVD
 date: 2023-02-27
 category:
   - AI
@@ -10,7 +10,7 @@ tag:
   - SVD
 ---
 
-SVD 分解简单总结。
+特征值分解（EVD）和奇异值分解（SVD）简单总结。
 
 <!-- more -->
 
@@ -196,7 +196,7 @@ $$
 \boldsymbol{A} = \boldsymbol{U}\boldsymbol{\Sigma}\boldsymbol{V}^{\mathsf{T}}
 $$
 
-假设 $\boldsymbol{A}$ 是一个 $m \times n$ 的矩阵，那么得到的 $\boldsymbol{U}$ 是一个 $m \times m$ 方阵，$\boldsymbol{U}$ 里面的正交向量被称为左奇异向量。$\boldsymbol{\Sigma}$ 是一个 $m \times n$ 的矩阵，$\boldsymbol{\Sigma}$ 是对角矩阵，对角线上的元素称为奇异值。
+若 $\boldsymbol{A}$ 是一个 $m \times n$ 的矩阵，那么得到的 $\boldsymbol{U}$ 是一个 $m \times m$ 方阵，$\boldsymbol{U}$ 里面的正交向量被称为左奇异向量。$\boldsymbol{\Sigma}$ 是一个 $m \times n$ 的矩阵，且 $\boldsymbol{\Sigma}$ 是对角矩阵，对角线上的元素称为奇异值。$\boldsymbol{V}$ 是 $n \times n$ 矩阵，且 $U$ 和 $V$ 都是酉矩阵。
 
 那么我们如何计算左奇异向量、右奇异向量和奇异值呢？我们可以把奇异值和特征值联系起来。
 
