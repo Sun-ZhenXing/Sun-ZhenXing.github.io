@@ -252,8 +252,18 @@ deb https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
 
 ## 3. PyPI 镜像
 
+推荐使用负载均衡镜像，新版本的 `pip` 可自动选择最快的镜像站点下载，一般比流行镜像站点更快。
+
+```bash
+# 更新 pip
+python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+
+# 配置全局负载均衡镜像
+pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirrors.aliyun.com/pypi/simple/ https://repo.huaweicloud.com/repository/pypi/simple/ https://mirrors.bfsu.edu.cn/pypi/web/simple/ https://pypi.mirrors.ustc.edu.cn/simple/ https://pypi.douban.com/simple/"
+```
+
 推荐镜像列表：
-1. [清华大学镜像](https://pypi.tuna.tsinghua.edu.cn/simple)
+1. [清华大学镜像](https://pypi.tuna.tsinghua.edu.cn/simple/)
 2. [阿里云镜像](https://mirrors.aliyun.com/pypi/simple/)
 3. [中国科技大学镜像](https://pypi.mirrors.ustc.edu.cn/simple/)
 4. [豆瓣镜像](https://pypi.douban.com/simple/)
