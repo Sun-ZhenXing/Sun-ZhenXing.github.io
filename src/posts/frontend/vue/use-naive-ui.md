@@ -37,7 +37,7 @@ pnpm add -D naive-ui
 pnpm add -D vfonts
 ```
 
-*@optional* *@recommend* 如果需要配套的图标，安装 `@vicons/ionicons5`：
+*@optional* *@note:推荐* 如果需要配套的图标，安装 `@vicons/ionicons5`：
 
 ```bash
 pnpm add -D @vicons/ionicons5

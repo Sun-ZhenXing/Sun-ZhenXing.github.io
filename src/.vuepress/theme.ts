@@ -131,12 +131,12 @@ export default hopeTheme({
       footnote: true,
       stylize: [
         {
-          matcher: '@recommend',
-          replacer: ({ tag }) => {
+          matcher: /@note:.+/,
+          replacer: ({ tag, content }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'warning', vertical: 'inherit' },
-              content: '推荐'
+              attrs: { type: 'warning' },
+              content: content.substring(6)
             }
           }
         },

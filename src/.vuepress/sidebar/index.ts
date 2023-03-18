@@ -90,6 +90,14 @@ export const Sidebar = sidebar({
     },
     '/posts/intro'
   ],
+  '/posts/ideas/': [
+    {
+      text: '奇思妙想',
+      icon: 'ability',
+      children: 'structure',
+    },
+    '/posts/intro'
+  ],
   '/posts/meta/': [
     {
       text: '博客构建引导',
