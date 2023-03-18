@@ -92,23 +92,21 @@ export const Sidebar = sidebar({
   ],
   '/posts/meta/': [
     {
-      text: '元设置',
+      text: '博客构建引导',
       icon: 'setting',
       children: 'structure',
     },
+    '/slides',
     '/posts/intro'
   ],
   '/posts/intro': [
-    '/posts/intro',
     '/posts/meta',
-    '/slides'
+    '/slides',
+    '/posts/intro',
   ],
   '/': [
-    {
-      text: '元设置',
-      icon: 'setting',
-      children: 'structure',
-    },
+    '/posts/meta',
+    '/slides',
     '/posts/intro',
   ]
 })
