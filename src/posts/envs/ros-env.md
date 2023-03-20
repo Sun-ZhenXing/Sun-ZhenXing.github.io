@@ -30,7 +30,7 @@ tag:
 | 华为云   | [repo.huaweicloud.com](https://repo.huaweicloud.com/ubuntu-releases/)                 |
 | 阿里云   | [mirrors.aliyun.com](https://mirrors.aliyun.com/ubuntu-releases/)                     |
 
-下载得到 `ubuntu-20.04.5-desktop-amd64.iso`，安装教程可参考网络。
+下载得到 `ubuntu-20.04.5-desktop-amd64.iso`，安装教程如有问题，可参考网络其他教程。
 
 ## 2. 基础安装
 
@@ -66,15 +66,17 @@ pip3 config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple
 ```bash
 cd
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+# 克隆 ROS 镜像仓库，如果克隆出错可尝试配置代理，或提前下载解压
 git clone https://github.com/ros/rosdistro.git
 ```
 
-如果克隆出错可参考代理配置，或提前下载解压。
+安装完整版 `ros-noetic-desktop-full`，如果需要精简版请替换名称：
 
 ```bash
 cat rosdistro/ros.asc | sudo apt-key add -
 sudo apt update
-sudo install ros-noetic-desktop-full
+sudo install -y ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -82,7 +84,7 @@ source ~/.bashrc
 安装其他依赖：
 
 ```bash
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
+sudo apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 ```
 
 ## 3. 初始化配置
@@ -140,7 +142,18 @@ rosrun turtlesim turtlesim_node
 再创建一个新终端，移动小海龟：
 
 ```bash
-rosrun turtlesim  turtle_teleop_key
+rosrun turtlesim turtle_teleop_key
 ```
 
-根据指示，通过键盘控制小海龟移动。
+根据指示，通过键盘按键控制小海龟移动。
+
+## 5. VS Code 开发环境
+
+这一步可选，如果直接在 [VS Code 官网](https://code.visualstudio.com/) 下载安装包，请确保下载 Linux x64	`.deb` 版本。
+
+如果需要配置请安装：
+- Python 扩展包
+- CMake 扩展包
+- C/C++ 语言支持
+
+这些扩展包直接搜索均为第一个，直接安装即可。安装完成之后即可使用，不需要编写其他配置文件。

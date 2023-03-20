@@ -4,7 +4,7 @@ export const Sidebar = sidebar({
   '/posts/envs/': [
     {
       text: '环境搭建',
-      icon: 'setting',
+      icon: 'build',
       children: 'structure',
     },
     '/posts/intro'
