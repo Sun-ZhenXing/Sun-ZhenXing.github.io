@@ -14,6 +14,16 @@ tag:
 
 [[TOC]]
 
+::: info Docker 版本
+
+可以使用 Docker 容器安装核心版本。如果需要安装桌面支持的 Docker 版本，可以参考 [官方 dockerhub](https://hub.docker.com/r/osrf/ros)，可以将 Docker 容器映射到 X11 服务器上，Windows/Mac 需要安装单独的 X11 服务程序。完整版本：
+
+```bash
+docker pull osrf/ros:noetic-desktop-full-focal
+```
+
+:::
+
 ## 1. 安装 Ubuntu 20
 
 本文全部基于 Ubuntu 20.04 的环境，可以使用虚拟机或实体机器安装。
@@ -76,7 +86,7 @@ git clone https://github.com/ros/rosdistro.git
 ```bash
 cat rosdistro/ros.asc | sudo apt-key add -
 sudo apt update
-sudo install -y ros-noetic-desktop-full
+sudo apt install -y ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
