@@ -159,7 +159,7 @@ catkin_install_python(PROGRAMS scripts/person_sub.py
 @tab 终端 1
 
 ```bash
-# 启动 ROS 核心进程，如果已启动就不需要再次启动了
+# 启动 ROS 核心进程，只需要启动一次
 roscore
 ```
 
@@ -180,3 +180,118 @@ rosrun plumbing_pub_sub person_sub.py
 :::
 
 如果两个终端都分别看到消息表明成功。
+
+## 2. 服务通信
+
+创建功能包名为 `plumbing_server_client` 并添加相关依赖：
+1. 在 VS Code 中按 `Ctrl + Shift + P` 使用命令面板，输入 `ROS: Create Catkin Package` 回车
+2. 接着输入包名 `plumbing_server_client`
+3. 输入依赖项 `roscpp rospy std_msgs`
+
+在功能包下创建 `scripts` 文件夹和 `srv` 文件夹，创建文件 `srv/Multiply.srv`，其内容为：
+
+```go
+# 客户端请求时发送的两个数字
+int32 num1
+int32 num2
+---
+# 服务器响应发送的数据
+int32 sum
+```
+
+编辑 `plumbing_server_client/package.xml`，在 `<exec_depend>` 标签附近添加下面两句：
+
+```xml
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+```
+
+编辑 `plumbing_server_client/CMakeLists.txt`：
+
+```cmake
+# 需要替换
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+
+# 直接添加
+add_service_files(
+  FILES
+  Multiply.srv
+)
+
+# 直接添加
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
+
+# 需要替换
+catkin_package(
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+)
+```
+
+现在执行构建，步骤和上面一样。确保生成成功继续。
+
+创建 `scripts/mul_srv.py`，内容为：
+
+```python
+#!/usr/bin/env python3
+
+import rospy
+from plumbing_server_client.srv import Multiply, MultiplyRequest, MultiplyResponse
+
+def do_req(req: MultiplyRequest):
+    res = req.num1 * req.num2
+    rospy.loginfo('got data: %d x %d = %d', req.num1, req.num2, res)
+    resp = MultiplyResponse(res)
+    resp.sum = res
+    return resp
+
+if __name__ == '__main__':
+    rospy.init_node('MulService')
+    server = rospy.Service('Mul', Multiply, do_req)
+    rospy.spin()
+```
+
+创建 `scripts/mul_cli.py`，内容为：
+
+```python
+import sys
+
+import rospy
+
+from plumbing_server_client.srv import Multiply, MultiplyResponse
+
+if __name__ == '__main__':
+    if len(sys.argv) != 3:
+        rospy.logerr('Params Error!')
+        sys.exit(1)
+    rospy.init_node('MulCli')
+    client = rospy.ServiceProxy('Mul', Multiply)
+    num1 = int(sys.argv[1])
+    num2 = int(sys.argv[2])
+    client.wait_for_service()
+    res: MultiplyResponse = client.call(num1, num2)
+    rospy.loginfo('got res: %d', res.sum)
+```
+
+加入下面的代码到 `CMakeLists.txt`：
+
+```cmake
+catkin_install_python(PROGRAMS scripts/mul_srv.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+catkin_install_python(PROGRAMS scripts/mul_cli.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+```
+
+现在执行构建，步骤和上面一样。
+
+现在授予权限并运行服务，测试结果。
