@@ -165,5 +165,6 @@ rosrun turtlesim turtle_teleop_key
 - Python 扩展包
 - CMake 扩展包
 - C/C++ 语言支持
+- ROS 支持
 
 这些扩展包直接搜索均为第一个，直接安装即可。安装完成之后即可使用，不需要编写其他配置文件。
