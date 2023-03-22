@@ -11,6 +11,12 @@ ROS 实验内容。
 
 <!-- more -->
 
+::: info 说明
+
+本文的源代码在 [Gitee](https://gitee.com/sun-zhenxing/ros-lab) 上保存，在进行本文实验时需要确保安装了 [ROS 环境安装](./ros-env.md) 一文中的指定环境。
+
+:::
+
 ## 1. 自定义话题通信
 
 创建一个名为 `learning01_ws` 的工作空间：
@@ -292,6 +298,37 @@ catkin_install_python(PROGRAMS scripts/mul_cli.py
 )
 ```
 
-现在执行构建，步骤和上面一样。
-
 现在授予权限并运行服务，测试结果。
+
+```bash
+chmod +x plumbing_server_client/scripts/*.py
+```
+
+现在执行构建，步骤和上述构建步骤一致，确保构建成功。
+
+下面创建三个终端，执行测试：
+
+::: code-tabs
+
+@tab 终端 1
+
+```bash
+# 启动 ROS 核心进程，只需要启动一次
+roscore
+```
+
+@tab 终端 2
+
+```bash
+source ./devel/setup.bash
+rosrun plumbing_server_client mul_srv.py
+```
+
+@tab 终端 3
+
+```bash
+source ./devel/setup.bash
+rosrun plumbing_server_client mul_cli.py
+```
+
+:::
