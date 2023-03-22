@@ -2413,7 +2413,7 @@ packages:
     dependencies:
       '@vueuse/core': 9.13.0_vue@3.2.47
       autosize: 6.0.1
-      marked: 4.2.12
+      marked: 4.3.0
       vue: 3.2.47
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -2516,7 +2516,7 @@ packages:
       abortcontroller-polyfill: 1.7.5
       hanabi: 0.4.0
       insane: 2.6.2
-      marked: 4.2.12
+      marked: 4.3.0
     dev: true
 
   /artplayer/4.6.2:
@@ -4307,8 +4307,8 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /marked/4.2.12:
-    resolution: {integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==}
+  /marked/4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
     engines: {node: '>= 12'}
     hasBin: true
     dev: true
