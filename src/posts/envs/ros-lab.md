@@ -185,6 +185,12 @@ rosrun plumbing_pub_sub person_sub.py
 
 :::
 
+使用下面的命令用于可视化查看当前 ROS 通信的逻辑图：
+
+```bash
+rqt_graph
+```
+
 如果两个终端都分别看到消息表明成功。
 
 ## 2. 服务通信
@@ -328,7 +334,9 @@ rosrun plumbing_server_client mul_srv.py
 
 ```bash
 source ./devel/setup.bash
-rosrun plumbing_server_client mul_cli.py
+rosrun plumbing_server_client mul_cli.py 3 4
 ```
 
 :::
+
+终端 3 用于计算两个数的乘积，需要在命令行指定这两个数字。
