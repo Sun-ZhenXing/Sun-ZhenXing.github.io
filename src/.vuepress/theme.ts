@@ -135,7 +135,7 @@ export default hopeTheme({
           replacer: ({ tag, content }) => {
             if (tag === 'em') return {
               tag: 'Badge',
-              attrs: { type: 'warning' },
+              attrs: { type: 'warning', vertical: 'inherit' },
               content: content.substring(6)
             }
           }

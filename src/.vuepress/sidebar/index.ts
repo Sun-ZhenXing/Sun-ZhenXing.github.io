@@ -60,33 +60,8 @@ export const Sidebar = sidebar({
   '/posts/frontend/': [
     {
       text: '前端',
-      icon: 'setting',
-      children: [
-        {
-          prefix: 'vue/',
-          collapsible: true,
-          text: 'Vue',
-          children: 'structure'
-        },
-        {
-          prefix: 'history/',
-          collapsible: true,
-          text: '历史',
-          children: 'structure'
-        },
-        {
-          prefix: 'awesome/',
-          collapsible: true,
-          text: 'Awesome 项目',
-          children: 'structure'
-        },
-        {
-          prefix: 'android/',
-          collapsible: true,
-          text: 'Android',
-          children: 'structure'
-        }
-      ]
+      icon: 'page',
+      children: 'structure'
     },
     '/posts/intro'
   ],
