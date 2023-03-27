@@ -40,22 +40,16 @@ export const Sidebar = sidebar({
     {
       text: '后端',
       icon: 'setting',
-      children: [
-        {
-          prefix: 'history/',
-          collapsible: true,
-          text: '历史',
-          children: 'structure'
-        },
-        {
-          prefix: 'tech/',
-          collapsible: true,
-          text: '技术',
-          children: 'structure'
-        }
-      ]
+      children: 'structure'
     },
     '/posts/intro'
+  ],
+  '/posts/computer-core/': [
+    {
+      text: '计算机核心知识',
+      icon: 'computer',
+      children: 'structure'
+    }
   ],
   '/posts/frontend/': [
     {
