@@ -49,7 +49,8 @@ export const Sidebar = sidebar({
       text: '计算机核心知识',
       icon: 'computer',
       children: 'structure'
-    }
+    },
+    '/posts/intro'
   ],
   '/posts/frontend/': [
     {
