@@ -1,9 +1,9 @@
 ---
-title: 环境搭建
 icon: build
-date: 2022-12-16
+title: 环境搭建
 timeline: false
 article: false
+index: false
 ---
 
 <AutoCatalog />

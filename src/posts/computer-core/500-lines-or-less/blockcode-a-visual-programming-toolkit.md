@@ -1,5 +1,5 @@
 ---
-title: '1. Blockcode：一个可视化编程工具'
+title: '2. Blockcode：一个可视化编程工具'
 date: 2023-03-27
 category:
   - 计算机核心知识
@@ -7,7 +7,7 @@ tag:
   - '500 Lines or Less'
 ---
 
-第一章：Blockcode：一个可视化编程工具。
+第二章：Blockcode：一个可视化编程工具。
 
 <!-- more -->
 

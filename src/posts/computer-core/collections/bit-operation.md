@@ -11,6 +11,8 @@ tag:
 
 <!-- more -->
 
+[[TOC]]
+
 来自 LeetCode 的引述：
 
 > 位操作（Bit Manipulation）是程序设计中对位模式或二进制数的一元和二元操作。

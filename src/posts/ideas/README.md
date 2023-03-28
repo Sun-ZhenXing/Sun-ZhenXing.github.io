@@ -4,6 +4,7 @@ icon: ability
 date: 2023-03-17
 timeline: false
 article: false
+index: false
 ---
 
 <AutoCatalog />
