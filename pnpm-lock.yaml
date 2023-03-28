@@ -1309,7 +1309,7 @@ packages:
     resolution: {integrity: sha512-2xAv2GFuHzzmG0SSZgf8wHX0qZX8n9Y1ZirKUk5Wrdc+vH9CL837x2hZIUdwcPZI9caBA+/CzxsS68O4waYjUQ==}
     dependencies:
       '@docsearch/react': 3.3.3_6nilccg2rhd3mct5xof6ep35te
-      preact: 10.13.1
+      preact: 10.13.2
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -2677,7 +2677,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001470
-      electron-to-chromium: 1.4.340
+      electron-to-chromium: 1.4.341
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -3338,8 +3338,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.340:
-    resolution: {integrity: sha512-zx8hqumOqltKsv/MF50yvdAlPF9S/4PXbyfzJS6ZGhbddGkRegdwImmfSVqCkEziYzrIGZ/TlrzBND4FysfkDg==}
+  /electron-to-chromium/1.4.341:
+    resolution: {integrity: sha512-R4A8VfUBQY9WmAhuqY5tjHRf5fH2AAf6vqitBOE0y6u2PgHgqHSrhZmu78dIX3fVZtjqlwJNX1i2zwC3VpHtQQ==}
     dev: true
 
   /elkjs/0.8.2:
@@ -4635,8 +4635,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact/10.13.1:
-    resolution: {integrity: sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ==}
+  /preact/10.13.2:
+    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
     dev: true
 
   /pretty-bytes/5.6.0:
@@ -5171,8 +5171,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /twikoo/1.6.10:
-    resolution: {integrity: sha512-5CPfRUzd8kHvNB6ekYXvgEbsIEQuySBOm47VkMh3nI4rj79crT+2v9aCDVuson+KorEngdGfe5MOni0VKNblmQ==}
+  /twikoo/1.6.11:
+    resolution: {integrity: sha512-/d0MJFDrtgOHtKh9QN8KDT58h2odtZOFli7CLK83hu1BB9VqIi5jE9PqU9UggZD89vhXrYRXMkEFATMoMSbBSw==}
     dev: true
 
   /type-fest/0.16.0:
@@ -5454,7 +5454,7 @@ packages:
       '@waline/client': 2.14.9
       artalk: 2.5.2
       giscus: 1.2.8
-      twikoo: 1.6.10
+      twikoo: 1.6.11
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
       vuepress: 2.0.0-beta.61_zcwlgd45apez724duilctoxt4u
