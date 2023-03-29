@@ -27,7 +27,7 @@ Cron 使用的语法就是 Cron 表达式。原始的 Cron 表达式是五段的
 
 ::: info 第三方工具
 
-有许多作业调度框架都使用 Cron 表达式，例如 Java 生态的 [Quartz](https://github.com/quartz-scheduler/quartz) 或者 Python 生态的 [Rocketry](https://github.com/Miksus/rocketry) 等。这些框架都提供了 Cron 表达式的解析和生成工具，可以方便地使用 Cron 表达式来管理作业。
+有许多作业调度框架都使用 Cron 表达式，例如 Java 生态的 [Quartz](https://github.com/quartz-scheduler/quartz) 或者 Python 生态的 [Rocketry](https://github.com/Miksus/rocketry) 等。另外像 GitHub Actions 这样的 CI 工具也可以使用 Cron 指定其运行周期，这些框架或平台都提供了 Cron 表达式的解析和生成工具，可以方便地使用 Cron 表达式来管理作业。
 
 :::
 

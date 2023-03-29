@@ -7,11 +7,18 @@ tag:
   - '500 Lines or Less'
 ---
 
-第一章：500 Lines or Less 翻译。
+第一章：500 Lines or Less 介绍。
+
 
 <!-- more -->
 
 [[TOC]]
+
+::: info 关于翻译
+
+本系列翻译自 [500 Lines or Less](http://aosabook.org/en/500L/archives.html)，部分翻译内容参考网络上的其他翻译，包含机翻，故不能保证准确性，如果您发现了错误，欢迎指正。
+
+:::
 
 ## 本书介绍
 
