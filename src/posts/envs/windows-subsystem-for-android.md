@@ -34,6 +34,28 @@ Windows 安卓子系统的使用简介。
 
 可选配置：**图形和性能**，可指定显卡运行 Android 子系统，例如指定为 **NVIDIA GeForce RTX 3070 Ti Laptop GPU**，以提升性能。
 
+::: details 版本信息
+
+通过查看系统版本，我们发现此系统是 Android 13，内核版本如下：
+
+```text
+5.10.117-windows-subsystem-for-android-20220906
+#1 Tue Sep 6 23:23:03 UTC 2022
+```
+
+使用 Termux 命令 `uname -a` 的输出如下：
+
+```text
+Linux localhost 5.10.117-windows-subsystem-for-android-20220906
+#1 SMP PREEMPT Tue Sep 6 23:23:03 UTC 2022 x86_64 Android
+```
+
+这不是意味着 WSA 使用 x86_64 架构，WSA 使用 Intel Bridge 技术在基于 x86 的处理器上模拟 ARM 应用程序，这可以让其兼容 x86 和 ARM 架构的应用程序。
+
+WSA 和 WSL 2 使用的不是一张网卡，WSA 使用 **以太网适配器 vEthernet (WSLCore)**，而 WSL 2 使用 **以太网适配器 vEthernet (WSL)**。
+
+:::
+
 ## 2. 使用 ADB 连接
 
 ::: tip ADB
@@ -82,7 +104,7 @@ adb shell pm list packages
 adb shell am start -n <package-name>/<activity-name>
 ```
 
-但是获取一个应用的 `Activity` 名称比较麻烦，可以使用下面的命令查看应用的详细信息：
+但是获取一个应用的首屏 `Activity` 名称比较麻烦，可以使用下面的命令查看应用的详细信息：
 
 ```bash
 adb shell dumpsys package <package-name>
@@ -100,7 +122,7 @@ start wsa://com.android.settings
 wsa://com.microsoft.launcher
 ```
 
-这样双击就可以打开 Android 子系统的桌面了，但是不知道为什么不能更换壁纸。
+这样双击就可以打开 Android 子系统的桌面了，但是不能设置为默认桌面，也不能更换壁纸，原因是 WSA 的默认应用指向了 Windows 默认应用。
 
 ## 4. 配合 Android Studio 进行开发
 
@@ -113,3 +135,13 @@ wsa://com.microsoft.launcher
 在 PowerToys 项目的 Releases 中下载安装最新版本即可直接使用。在任意窗口中按 `Win + Ctrl + T` 切换置顶即可。
 
 如果需要锁定大小，可以在 WSA 的设置界面给每个应用程序单独设置。
+
+::: warning 闪退
+
+注意：部分应用随意调整大小时可能闪退。
+
+如果使用 Android Studio 进行开发时，调整应用大小出现闪退，则可能是空指针异常。部分视图事件在重绘时没有传入 `view`，因此调整出错事件的视图对象，类型是 `View?`（Kotlin）或 `Optional<View>`（Java），需要进行判空处理。
+
+:::
+
+还有一些行为和实体机不一致：例如 `Toast`，实体机上 `Toast` 会显示在最上层，但是在 WSA 上 `Toast` 将发送到 Windows 通知栏。如果没有显示 `Toast`，可以检查 Windows 通知栏是否有通知或者是否开启了通知。
