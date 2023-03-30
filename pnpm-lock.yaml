@@ -2677,7 +2677,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001472
-      electron-to-chromium: 1.4.342
+      electron-to-chromium: 1.4.343
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -3338,8 +3338,8 @@ packages:
       jake: 10.8.5
     dev: true
 
-  /electron-to-chromium/1.4.342:
-    resolution: {integrity: sha512-dTei3VResi5bINDENswBxhL+N0Mw5YnfWyTqO75KGsVldurEkhC9+CelJVAse8jycWyP8pv3VSj4BSyP8wTWJA==}
+  /electron-to-chromium/1.4.343:
+    resolution: {integrity: sha512-22C6pOljO+QQ/yeBZJkxewjsGwSKCXymng7dF8lir3m8iJGi6guoLVkK8jghCf3o0/tARFASAgLP8OzR9SKRCA==}
     dev: true
 
   /elkjs/0.8.2:
@@ -4576,8 +4576,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /photoswipe/5.3.6:
-    resolution: {integrity: sha512-v7e8iMfaPUujTACYsK5HBCCtFoW9n2dMZmjIlbvFS2oSpTQmPrfc3PrWnGx8OGY3jNOKho8JC8L277+m+9ag9Q==}
+  /photoswipe/5.3.7:
+    resolution: {integrity: sha512-zsyLsTTLFrj0XR1m4/hO7qNooboFKUrDy+Zt5i2d6qjFPAtBjzaj/Xtydso4uxzcXpcqbTmyxDibb3BcSISseg==}
     engines: {node: '>= 0.12.0'}
     dev: true
 
@@ -5713,7 +5713,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
       '@vueuse/core': 9.13.0_vue@3.2.47
-      photoswipe: 5.3.6
+      photoswipe: 5.3.7
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
       vuepress: 2.0.0-beta.61_zcwlgd45apez724duilctoxt4u

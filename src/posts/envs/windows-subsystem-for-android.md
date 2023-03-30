@@ -15,7 +15,7 @@ Windows 安卓子系统的使用简介。
 
 ## 1. 安装 WSA
 
-[Windows 安卓子系统](https://learn.microsoft.com/zh-cn/windows/android/wsa/)（Windows Subsystem for Android，WSA）使 Windows 11 能够运行 Android 应用程序。
+[Windows 安卓子系统](https://learn.microsoft.com/zh-cn/windows/android/wsa/)（Windows Subsystem for Android™，WSA）使 Windows 11 能够运行 Android 应用程序。
 
 首先确认你的 Windows 版本是否支持 WSA：
 - x64 或 ARM64 架构的现代处理器
@@ -30,11 +30,21 @@ Windows 安卓子系统的使用简介。
 
 现在，你的 Windows 11 可以安装任何 Android 应用了，Android 应用和已经安装的 Windows 应用看起来一模一样。
 
-然后进行一些配置，打开 WSA 安卓子系统设置页面，打开 **开发人员模式** 选项。
+然后进行一些配置，例如，如果你需要使用 WSA 进行开发，那么打开 **开发人员模式** 选项。
 
-还有可选配置：**图形和性能**：可以指定显卡，以提升性能，例如指定为 **NVIDIA GeForce GTX 3070 Ti GPU**。
+可选配置：**图形和性能**，可指定显卡运行 Android 子系统，例如指定为 **NVIDIA GeForce RTX 3070 Ti Laptop GPU**，以提升性能。
 
 ## 2. 使用 ADB 连接
+
+::: tip ADB
+
+下面的所有操作需要 [ADB 工具](https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn)，如果没有安装，请先安装 ADB 工具。
+
+如果不希望使用开启调试，可以直接阅读 [3. 使用 WSA](#_3-使用-wsa) 中的相关说明进行使用。
+
+:::
+
+确保已经打开 **开发人员模式**。
 
 查看 ADB 版本：
 
@@ -56,7 +66,43 @@ adb connect 127.0.0.1:58526
 adb install <apk-file>
 ```
 
-## 3. 配合 Android Studio 使用
+## 3. 使用 WSA
+
+通常启动一个应用需要知道其包名，如果你已经知道包名，那么直接在文件管理器中输入 `wsa://<package-name>` 即可启动应用。
+
+如果不知道，可以使用下面的命令查看所有已安装的应用的包名：
+
+```bash
+adb shell pm list packages
+```
+
+所有的 Android 都可以使用下面的命令启动应用：
+
+```bash
+adb shell am start -n <package-name>/<activity-name>
+```
+
+但是获取一个应用的 `Activity` 名称比较麻烦，可以使用下面的命令查看应用的详细信息：
+
+```bash
+adb shell dumpsys package <package-name>
+```
+
+由于 Windows 11 支持从包名启动，所以可以使用 CMD 命令行来启动应用，例如启动设置：
+
+```bash
+start wsa://com.android.settings
+```
+
+由于 WSA 没有桌面，操作有点麻烦，我们可以给其安装一个 [微软桌面](https://www.coolapk.com/apk/com.microsoft.launcher)，然后新建一个快捷方式，地址是：
+
+```yml
+wsa://com.microsoft.launcher
+```
+
+这样双击就可以打开 Android 子系统的桌面了，但是不知道为什么不能更换壁纸。
+
+## 4. 配合 Android Studio 进行开发
 
 如果已经使用 ADB 连接到 WSA，那么就可以使用 Android Studio 会自动识别，并在设备中显示 **Microsoft Corporation Subsystem for Android(TM)**，可以像正常开发 Android 应用一样开发。
 
