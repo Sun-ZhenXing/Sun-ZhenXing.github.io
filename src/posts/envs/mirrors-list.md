@@ -13,6 +13,12 @@ tag:
 
 [[TOC]]
 
+::: tip 选择镜像
+
+本文的所有镜像都是中国大陆节点，为了提高速度，可以选择不那么流行的镜像（如某些大学或网易、腾讯等，前提是稳定），由于清华大学、阿里云等镜像为大众熟知，其服务速度常常波动，且常常下载缓慢并被限速。如果支持尽量选择负载均衡镜像。
+
+:::
+
 ## 1. 系统发行版镜像
 
 ### 1.1 Ubuntu 镜像
@@ -52,16 +58,127 @@ tag:
 
 ### 2.1 Ubuntu 镜像源
 
+Ubuntu 使用 APT 作为包管理器，配置文件在保存在 `/etc/apt/sources.list` 中。
+
+```bash
+sudo su
+mv /etc/apt/sources.list /etc/apt/sources.list-bak
+echo '
+deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse
+' > /etc/apt/sources.list
+```
+
+#### Ubuntu 22.04 (jammy)
+
+::: code-tabs
+
+@tab 官方源
+
+```bash
+```
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+```
+
+@tab 阿里云
+
+```bash
+```
+
+:::
+
+#### Ubuntu 20.04 (focal)
+
+::: code-tabs
+
+@tab 官方源
+
+```bash
+```
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+```
+
+@tab 阿里云
+
+```bash
+```
+
+:::
+
+#### Ubuntu 18.04 (bionic)
+
+::: code-tabs
+
+@tab 官方源
+
+```bash
+```
+
+@tab 清华大学
+
+```bash
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+```
+
+@tab 阿里云
+
+```bash
+```
+
+:::
+
 ### 2.2 Debian 镜像源
 
 Debian 使用 APT 作为包管理器，配置文件在保存在 `/etc/apt/sources.list` 中。
 
 ```bash
+sudo su
 mv /etc/apt/sources.list /etc/apt/sources.list-bak
-echo '...' > /etc/apt/sources.list
+echo '
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
+' > /etc/apt/sources.list
 ```
 
-此处不推荐使用非官方的安全更新，具体原因可参考 [Debian: FAQ](https://www.debian.org/security/faq.en.html#mirror)。如果你想将镜像源的安全更新改为官方地址，请保留官方的 `*-security` 条目。
+此处不推荐使用非官方的安全更新，具体原因可参考 [Debian: FAQ](https://www.debian.org/security/faq.en.html#mirror)。如果你想将镜像源的安全更新改为官方地址，请保留官方的 `*-security` 条目。例如 Bullseye 的 `sources.list`：
+
+```bash
+deb https://security.debian.org/debian-security bullseye-security main contrib non-free
+# deb-src https://security.debian.org/debian-security bullseye-security main contrib non-free
+```
 
 参考链接：
 - 清华大学：<https://mirrors.tuna.tsinghua.edu.cn/help/debian/>
@@ -69,7 +186,7 @@ echo '...' > /etc/apt/sources.list
 
 #### Debian 12 (bookworm)
 
-::: code-tabs#source
+::: code-tabs
 
 @tab 官方源
 
@@ -84,31 +201,24 @@ deb http://deb.debian.org/debian bookworm-updates main
 ```bash
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
-
-# deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
-# # deb-src https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
 ```
 
 @tab 阿里云
 
 ```bash
-
 ```
 
 :::
 
 #### Debian 11 (bullseye)
 
-::: code-tabs#source
+::: code-tabs
 
 @tab 官方源
 
@@ -123,18 +233,12 @@ deb http://deb.debian.org/debian bullseye-updates main
 ```bash
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-updates main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bullseye-backports main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main contrib non-free
-
-# deb https://security.debian.org/debian-security bullseye-security main contrib non-free
-# # deb-src https://security.debian.org/debian-security bullseye-security main contrib non-free
 ```
 
 @tab 阿里云
@@ -142,13 +246,10 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bullseye-security main 
 ```bash
 deb https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ bullseye main non-free contrib
-
 deb https://mirrors.aliyun.com/debian-security/ bullseye-security main
 # deb-src https://mirrors.aliyun.com/debian-security/ bullseye-security main
-
 deb https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ bullseye-updates main non-free contrib
-
 deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
 ```
@@ -157,7 +258,7 @@ deb https://mirrors.aliyun.com/debian/ bullseye-backports main non-free contrib
 
 #### Debian 10 (buster)
 
-::: code-tabs#source
+::: code-tabs
 
 @tab 官方源
 
@@ -172,18 +273,12 @@ deb http://deb.debian.org/debian buster-updates main
 ```bash
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-
-# deb https://security.debian.org/debian-security buster/updates main contrib non-free
-# # deb-src https://security.debian.org/debian-security buster/updates main contrib non-free
 ```
 
 @tab 阿里云
@@ -191,13 +286,10 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main con
 ```bash
 deb https://mirrors.aliyun.com/debian/ buster main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ buster main non-free contrib
-
 deb https://mirrors.aliyun.com/debian-security buster/updates main
 # deb-src https://mirrors.aliyun.com/debian-security buster/updates main
-
 deb https://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ buster-updates main non-free contrib
-
 deb https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
 ```
@@ -206,7 +298,7 @@ deb https://mirrors.aliyun.com/debian/ buster-backports main non-free contrib
 
 #### Debian 9 (stretch)
 
-::: code-tabs#source
+::: code-tabs
 
 @tab 官方源
 
@@ -221,18 +313,12 @@ deb http://deb.debian.org/debian stretch-updates main
 ```bash
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-updates main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ stretch-backports main contrib non-free
-
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main contrib non-free
-
-# deb https://security.debian.org/debian-security stretch/updates main contrib non-free
-# # deb-src https://security.debian.org/debian-security stretch/updates main contrib non-free
 ```
 
 @tab 阿里云
@@ -240,10 +326,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security stretch/updates main co
 ```bash
 deb https://mirrors.aliyun.com/debian/ stretch main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ stretch main non-free contrib
-
 deb https://mirrors.aliyun.com/debian-security stretch/updates main
 # deb-src https://mirrors.aliyun.com/debian-security stretch/updates main
-
 deb https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
 # deb-src https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
 ```
@@ -254,13 +338,35 @@ deb https://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib
 
 推荐使用负载均衡镜像，新版本的 `pip` 可自动选择最快的镜像站点下载，一般比流行镜像站点更快。
 
+::: code-tabs#sys
+
+@tab Linux
+
+```bash
+# 更新 pip
+python3 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
+
+# 配置全局负载均衡镜像
+pip3 config set global.extra-index-url "\
+https://pypi.tuna.tsinghua.edu.cn/simple/
+https://mirrors.163.com/pypi/simple/
+https://repo.huaweicloud.com/repository/pypi/simple/
+https://mirrors.bfsu.edu.cn/pypi/web/simple/
+https://pypi.mirrors.ustc.edu.cn/simple/
+https://pypi.douban.com/simple/"
+```
+
+@tab Windows
+
 ```bash
 # 更新 pip
 python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip
 
 # 配置全局负载均衡镜像
-pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirrors.aliyun.com/pypi/simple/ https://repo.huaweicloud.com/repository/pypi/simple/ https://mirrors.bfsu.edu.cn/pypi/web/simple/ https://pypi.mirrors.ustc.edu.cn/simple/ https://pypi.douban.com/simple/"
+pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/ https://mirrors.163.com/pypi/simple/ https://repo.huaweicloud.com/repository/pypi/simple/ https://mirrors.bfsu.edu.cn/pypi/web/simple/ https://pypi.mirrors.ustc.edu.cn/simple/ https://pypi.douban.com/simple/"
 ```
+
+:::
 
 推荐镜像列表：
 1. [清华大学镜像](https://pypi.tuna.tsinghua.edu.cn/simple/)

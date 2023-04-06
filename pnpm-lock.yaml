@@ -2062,8 +2062,8 @@ packages:
       '@vue/shared': 3.2.47
     dev: true
 
-  /@vue/repl/1.3.3_vue@3.2.47:
-    resolution: {integrity: sha512-mrN3Gd4CIaiIiRdi7/pAOH9rPud8q8I5svLurSoyxLhxFXs9WdfaKZlirExSJIuecHYFiAAozTBtb8XQPNhCHw==}
+  /@vue/repl/1.3.5_vue@3.2.47:
+    resolution: {integrity: sha512-O2Z8JKE15v14pE/wgw93Aw4+L0HjhsLc68ivuj1N09WXS9oyU33NTlh7PQhb75P43fadnypBDb4djD3pUWpjBQ==}
     peerDependencies:
       vue: ^3.2.13
     dependencies:
@@ -5661,7 +5661,7 @@ packages:
       '@mdit/plugin-tex': 0.3.0
       '@mdit/plugin-uml': 0.3.0
       '@types/markdown-it': 12.2.3
-      '@vue/repl': 1.3.3_vue@3.2.47
+      '@vue/repl': 1.3.5_vue@3.2.47
       '@vuepress/client': 2.0.0-beta.61
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
