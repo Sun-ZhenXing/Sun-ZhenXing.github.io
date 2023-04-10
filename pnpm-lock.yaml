@@ -5167,8 +5167,8 @@ packages:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
 
-  /twikoo/1.6.11:
-    resolution: {integrity: sha512-/d0MJFDrtgOHtKh9QN8KDT58h2odtZOFli7CLK83hu1BB9VqIi5jE9PqU9UggZD89vhXrYRXMkEFATMoMSbBSw==}
+  /twikoo/1.6.13:
+    resolution: {integrity: sha512-uio4mDBHKRtC4omWMccP7lPkBL9aiPgZo8DikR2oQSYlHp4lP4H4xYRJXe+g/oLbW/uyO4vP1gY92hlQSZdP8w==}
     dev: true
 
   /type-fest/0.16.0:
@@ -5450,7 +5450,7 @@ packages:
       '@waline/client': 2.14.9
       artalk: 2.5.4
       giscus: 1.2.8
-      twikoo: 1.6.11
+      twikoo: 1.6.13
       vue: 3.2.47
       vue-router: 4.1.6_vue@3.2.47
       vuepress: 2.0.0-beta.61_zcwlgd45apez724duilctoxt4u
