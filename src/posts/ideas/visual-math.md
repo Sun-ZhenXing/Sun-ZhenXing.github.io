@@ -60,3 +60,10 @@ def f(x: int) -> int:
 - 公式语言转换，需要自行实现（支持 LaTeX、MathML、OMML 和 MAthJson）
 - 将公式语言转换为指令语句，需要自行实现
 - 部分 NLP 模型
+
+可能的参考点：
+- 几何图形的 JS 库
+- [Octave Online](https://octave-online.net/)
+- 动画（SVG 动画或者 Canvas 动画）
+- 公式的输入和渲染库
+- 算法可视化
