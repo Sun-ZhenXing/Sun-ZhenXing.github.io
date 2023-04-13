@@ -1,0 +1,29 @@
+$mono-font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+input {
+  appearance: none;
+  margin: .3rem 0;
+  border: .05rem solid var(--note-border-color);
+  border-radius: .1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  font-family: var(--font-family-code);
+  display: block;
+  height: 1.8rem;
+  line-height: 1.2rem;
+  padding: .4rem .4rem;
+  outline: 0;
+  transition: border .2s, box-shadow .2s, color .2s;
+  width: 100%;
+
+  &:focus {
+    border-color: var(--theme-color);
+    box-shadow: 0 0 0 0.1rem rgb(87 85 217 / 20%);
+  }
+}
+
+label {
+  display: block;
+  line-height: 1.2rem;
+  padding: .3rem 0;
+}

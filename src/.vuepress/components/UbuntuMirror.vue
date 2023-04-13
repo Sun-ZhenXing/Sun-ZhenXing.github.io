@@ -23,8 +23,9 @@ type ProviderItem = {
   country: string
   priority: number
   remark: string
-}
-
+};
 </script>
+
 <template></template>
+
 <style lang="scss" scoped></style>
