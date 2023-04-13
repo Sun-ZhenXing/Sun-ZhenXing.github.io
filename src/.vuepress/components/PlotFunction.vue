@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import 'https://unpkg.com/function-plot/dist/function-plot.js'
 
 const props = defineProps<{
   id: string
@@ -16,8 +15,12 @@ const updateExpr = () => {
 
   const exprString = expr.value;
   setTimeout(() => {
+    if (!exprString) {
+      error.value = '请输入函数表达式'
+      return
+    }
     try {
-      (window as any).functionPlot({
+      (window as any).functionPlot && (window as any).functionPlot({
         target: `#${props.id}`,
         width,
         height,
@@ -34,7 +37,9 @@ const updateExpr = () => {
 }
 
 onMounted(() => {
-  updateExpr()
+  setTimeout(() => {
+    updateExpr()
+  }, 1000)
 })
 
 watch(() => expr.value, () => {
@@ -43,9 +48,10 @@ watch(() => expr.value, () => {
 </script>
 
 <template>
+  <component is="script" src="https://unpkg.com/function-plot/dist/function-plot.js"></component>
   <label :for="exprInputId">函数表达式</label>
   <input type="text" :id="exprInputId" autocomplete="off" v-model="expr" placeholder="如 x^2">
-  <div class="plot-area" :id="props.id"></div>
+  <div class="plot-area" :id="props.id" v-if="expr"></div>
   <div class="plot-error" v-show="error">{{ error }}</div>
 </template>
 
