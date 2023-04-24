@@ -94,6 +94,7 @@ export default hopeTheme({
       align: true,
       attrs: true,
       chart: false,
+      card: true,
       codetabs: true,
       container: true,
       demo: false,
