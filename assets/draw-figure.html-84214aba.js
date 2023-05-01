@@ -1,1 +1,0 @@
-import{_ as t,Y as s,Z as o,a1 as e}from"./framework-0b2fc941.js";const a={},c=e("p",null,"GhatGPT 的奇妙用法。",-1),n=e("nav",{class:"table-of-contents"},[e("ul")],-1),_=[c,n];function r(l,d){return s(),o("div",null,_)}const f=t(a,[["render",r],["__file","draw-figure.html.vue"]]);export{f as default};
