@@ -13,7 +13,7 @@ Windows 安卓子系统的使用简介。
 
 [[TOC]]
 
-## 1. 安装 WSA
+## 1. 安装官方版本的 WSA
 
 [Windows 安卓子系统](https://learn.microsoft.com/zh-cn/windows/android/wsa/)（Windows Subsystem for Android™，WSA）使 Windows 11 能够运行 Android 应用程序。
 
@@ -145,3 +145,5 @@ wsa://com.microsoft.launcher
 :::
 
 还有一些行为和实体机不一致：例如 `Toast`，实体机上 `Toast` 会显示在最上层，但是在 WSA 上 `Toast` 将发送到 Windows 通知栏。如果没有显示 `Toast`，可以检查 Windows 通知栏是否有通知或者是否开启了通知。
+
+如果您还有其他问题请参考 [WSA 进阶](./wsa-advanced.md)。
