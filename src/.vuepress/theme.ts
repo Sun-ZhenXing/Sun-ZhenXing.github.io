@@ -99,7 +99,9 @@ export default hopeTheme({
       figure: true,
       imgSize: true,
       include: true,
-      katex: true,
+      katex: {
+        copy: true,
+      },
       mark: true,
       mermaid: true,
       footnote: true,
@@ -145,9 +147,7 @@ export default hopeTheme({
           }
         }
       ],
-      presentation: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
       sub: true,
       sup: true,
       tabs: true,

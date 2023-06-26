@@ -1,22 +1,34 @@
 # 我的个人博客
 
-![](https://img.shields.io/github/actions/workflow/status/Sun-ZhenXing/Sun-ZhenXing.github.io/deploy-docs.yml?branch=main)
+![build status](https://img.shields.io/github/actions/workflow/status/Sun-ZhenXing/Sun-ZhenXing.github.io/deploy-docs.yml?branch=main)
 
 地址：<https://blog.alexsun.top/>，项目主页包含一些子项目的合集，强烈建议查看，包括：
+
 - OpenCV 笔记合集
 - 计算机网络笔记合集
 - 嵌入式笔记合集
 - ……
 
 使用框架：
+
 - VuePress2
 - VuePress Theme Hope
 - Vue3 + Vite + TypeScript
 
 ## 开始使用
 
+确保使用 `pnpm@8` 以上的版本。
+
 ```bash
+pnpm i
 pnpm dev
+```
+
+使用 Docker 构建：
+
+```bash
+docker build -t sun-zhenxing.github.io .
+docker run -d -p 8080:80 sun-zhenxing.github.io
 ```
 
 ## 问题

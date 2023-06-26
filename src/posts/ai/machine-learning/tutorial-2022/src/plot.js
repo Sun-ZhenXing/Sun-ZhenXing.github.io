@@ -6,18 +6,25 @@ function func(x) {
   return (x - 1) ** 2;
 }
 
-/**
- * 产生数据
- */
-function generateData() {
-  const data = [];
-  for (let i = -4; i <= 6; i += 0.05) {
-    data.push([
-      parseFloat(i.toFixed(5)),
-      parseFloat(func(i).toFixed(5))
-    ]);
+class FunctionPlot {
+  constructor(func, start = -5.0, end = 5.0, span = 0.05) {
+    this.func = func;
+    this.start = start;
+    this.end = end;
+    this.span = span;
+    this.data = this.generateData();
   }
-  return data;
+
+  generateData() {
+    const data = [];
+    for (let i = this.start; i <= this.end; i += this.span) {
+      data.push([
+        parseFloat(i.toFixed(5)),
+        parseFloat(this.func(i).toFixed(5))
+      ]);
+    }
+    return data;
+  }
 }
 
 const option = {
@@ -33,7 +40,7 @@ const option = {
   yAxis: {
     name: 'J(w)',
     min: -1,
-    max: 20,
+    max: 5,
     minorTick: {
       show: true
     },
@@ -67,6 +74,7 @@ const option = {
   //     endValue: 20
   //   }
   // ],
+
   // 数据集
   series: [
     {
@@ -76,7 +84,16 @@ const option = {
       // 是否裁剪超出坐标系部分的图形
       clip: true,
       // 数据
-      data: generateData()
+      data: new FunctionPlot(x => - 0.5 * Math.cos(10 * x) + 0.3 * Math.sin(2 * x) - x + 5, 0).generateData()
+    },
+    {
+      type: 'line',
+      // 显示数据点标记
+      showSymbol: false,
+      // 是否裁剪超出坐标系部分的图形
+      clip: true,
+      // 数据
+      data: new FunctionPlot(x => - x + 5, 0).generateData()
     }
   ]
 };

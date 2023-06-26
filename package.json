@@ -13,12 +13,12 @@
     "docs:dev": "vuepress dev src"
   },
   "devDependencies": {
-    "@algolia/client-search": "^4.17.0",
-    "@vuepress/client": "2.0.0-beta.62",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
-    "@vuepress/utils": "2.0.0-beta.62",
-    "vue": "3.3.1",
-    "vuepress": "2.0.0-beta.62",
-    "vuepress-theme-hope": "2.0.0-beta.210"
+    "@algolia/client-search": "^4.18.0",
+    "@vuepress/client": "2.0.0-beta.63",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.63",
+    "@vuepress/utils": "2.0.0-beta.63",
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.63",
+    "vuepress-theme-hope": "2.0.0-beta.228"
   }
 }
