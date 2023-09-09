@@ -37,15 +37,15 @@ Cron 表达式的格式如下：[^2]
 
 [^2]: Cron表达式的详细用法，简书，<https://www.jianshu.com/p/e9ce1a7e1ed1>
 
-| 字段         | 允许值          | 允许的特殊字符    |
-| ------------ | --------------- | ----------------- |
-| 秒           | 0-59            | `, - * /`         |
-| 分           | 0-59            | `, - * /`         |
-| 小时         | 0-23            | `, - * /`         |
-| 日期         | 1-31            | `, - * ? / L W C` |
-| 月份         | 1-12 或 JAN-DEC | `, - * /`         |
-| 星期         | 1-7 或 SUN-SAT  | `, - * ? / L C #` |
-| 年（可为空） | 空或 1970-2099  | `, - * /`         |
+| 字段                     | 允许值          | 允许的特殊字符    |
+| ------------------------ | --------------- | ----------------- |
+| 秒（可选，分为两种版本） | 0-59            | `, - * /`         |
+| 分                       | 0-59            | `, - * /`         |
+| 小时                     | 0-23            | `, - * /`         |
+| 日期                     | 1-31            | `, - * ? / L W C` |
+| 月份                     | 1-12 或 JAN-DEC | `, - * /`         |
+| 星期                     | 1-7 或 SUN-SAT  | `, - * ? / L C #` |
+| 年（可选）               | 空或 1970-2099  | `, - * /`         |
 
 ### 2.1. 基本用法
 
@@ -55,13 +55,14 @@ Cron 表达式的格式如下：[^2]
 - `"*"` 代表每秒钟触发一次
 - `","` 代表在指定的秒数触发，比如 `"0,15,45"` 代表 0 秒、15 秒和 45 秒时触发任务
 - `"-"` 代表在指定的范围内触发，比如 `"25-45"` 代表从 25 秒开始触发到 45 秒结束触发，每秒触发一次
-- `"/"` 代表步进，`"/"` 前面的值代表初始值（`"*"` 等同 `"0"`），后面的值代表偏移量，比如 `"0/20"` 或者 `"*/20"` 代表从 0 秒钟开始，每隔 20 秒钟触发一次，即第 0 秒、20 秒、40秒分别触发一次。`"10-45/20"` 代表在 `[10, 45]` 内步进 20 秒触发
+- `"/"` 代表步进，`"/"` 前面的值代表初始值（`"*"` 等同 `"0"`），后面的值代表偏移量，比如 `"0/20"` 或者 `"*/20"` 代表从 0 秒钟开始，每隔 20 秒钟触发一次，即第 0 秒、20 秒、40 秒分别触发一次。`"10-45/20"` 代表在 `[10, 45]` 内步进 20 秒触发
 
 由于日期和星期互斥，它们中的一个在指定时，另一个需要指定为 `?` 来避免冲突。
 
 ### 2.2. 特殊字符
 
 部分字段允许使用特殊字符，其含义如下：
+
 - `"?"` 代表不指定值，可以用于日期和星期字段
 - `"L"` 代表最后，可以用于日期和星期字段，比如 `"L"` 代表最后一天，`"6L"` 代表最后一个星期五
 - `"W"` 代表最近的工作日，可以用于日期字段，比如 `"15W"` 代表离 15 号最近的工作日
@@ -88,3 +89,63 @@ Cron 表达式的格式如下：[^2]
 | `0 15 10 ? * 6L`           | 每月的最后一个星期五上午 10:15 触发                               |
 | `0 15 10 ? * 6L 2022-2025` | 2022 年至 2025 年的每月的最后一个星期五上午 10:15 触发            |
 | `0 15 10 ? * 6#3`          | 每月的第三个星期五上午 10:15 触发                                 |
+
+```python
+import locale
+from datetime import datetime
+
+from cron_descriptor import CasingTypeEnum, ExpressionDescriptor
+from croniter import croniter
+
+print(locale.getdefaultlocale())
+print(datetime.now().strftime("%B"))
+
+# 设置新的语言
+locale.setlocale(locale.LC_ALL, "zh_CN.UTF-8")
+print(datetime.now().strftime("%B"))
+
+
+CRON = "2 13 * 5 *"
+base = datetime(2023, 8, 15, 4, 46)
+iter = croniter(CRON, base)
+print(iter.get_next(datetime))
+print(iter.get_next(datetime))
+print(iter.get_next(datetime))
+
+
+descriptor = ExpressionDescriptor(
+    expression=CRON,
+    casing_type=CasingTypeEnum.Title,
+    use_24hour_time_format=True,
+    locale_code="zh_CN",
+    verbose=True,
+)
+
+print(descriptor.get_description())
+```
+
+语言问题：
+
+```python
+import locale
+
+from cron_descriptor import Options, get_description
+
+options = Options()
+options.locale_code = "zh_CN"
+
+
+# current locale
+print(locale.getdefaultlocale())
+
+cron_express = "30 */6 * 1,2,3 1-5"
+print(get_description(cron_express))
+print(get_description(cron_express, options))
+
+# set new locale
+locale.setlocale(locale.LC_ALL, "zh_CN.UTF-8")
+
+
+print(get_description(cron_express))
+print(get_description(cron_express, options))
+```

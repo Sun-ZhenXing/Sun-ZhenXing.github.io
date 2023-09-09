@@ -46,6 +46,7 @@ pnpm create vite
 ```
 
 下面进行配置：
+
 1. 项目名，任意，遵循 Slug 命名
 2. 项目类型 Vue
 3. TypeScript 或 JavaScript
