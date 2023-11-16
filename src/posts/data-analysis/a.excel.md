@@ -3,6 +3,10 @@ title: 附录 A：数学公式
 icon: fluent:math-formula-24-filled
 ---
 
+附录：A 数学公式。
+
+<!-- more -->
+
 [[TOC]]
 
 ## 1. 斜率、波动率和相关系数

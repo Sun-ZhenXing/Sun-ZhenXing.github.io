@@ -1,9 +1,13 @@
 import { defineUserConfig } from 'vuepress'
 import { docsearchPlugin } from '@vuepress/plugin-docsearch'
 import { getDirname, path } from '@vuepress/utils'
+import { slug as slugify } from 'github-slugger'
+
 import theme from './theme.js'
 
 const __dirname = getDirname(import.meta.url)
+const ROOT_PATH = path.resolve(__dirname, '../..')
+const CURRENT_PATH = path.resolve(__dirname, '.')
 
 export default defineUserConfig({
   base: '/',
@@ -20,8 +24,17 @@ export default defineUserConfig({
 
   markdown: {
     code: {
-      lineNumbers: 10,
-    }
+      lineNumbers: 20,
+    },
+    importCode: {
+      handleImportPath: str => str
+        .replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
+        .replace(/^@\//, CURRENT_PATH.replace(/(?:|\\|\/)$/, '/')),
+    },
+    anchor: {
+      level: [1, 2, 3, 4, 5, 6],
+      slugify,
+    },
   },
 
   plugins: [
@@ -79,10 +92,7 @@ export default defineUserConfig({
     })
   ],
   alias: {
-    '@': path.resolve(
-      __dirname,
-      '.',
-    )
+    '@': CURRENT_PATH,
   },
   shouldPrefetch: false,
 })

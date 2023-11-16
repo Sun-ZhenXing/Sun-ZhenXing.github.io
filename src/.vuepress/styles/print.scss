@@ -1,3 +1,4 @@
+// optimize: print style
 @media print {
   :root {
     --text-color: #000;
@@ -5,10 +6,6 @@
 
   main.page {
     padding: 0;
-  }
-
-  nav.table-of-contents a {
-    text-decoration: none;
   }
 
   header,
@@ -57,5 +54,10 @@
   // fix: katex will hide when overflow
   .katex-display>.katex {
     white-space: pre-wrap !important;
+  }
+
+  // hide mermaid actions
+  .mermaid-actions {
+    display: none;
   }
 }

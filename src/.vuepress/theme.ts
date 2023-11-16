@@ -10,7 +10,7 @@ export default hopeTheme({
     url: 'https://github.com/Sun-ZhenXing',
   },
 
-  iconAssets: 'iconfont',
+  iconAssets: 'iconify',
   logo: '/logo.svg',
   repo: 'Sun-ZhenXing/Sun-ZhenXing.github.io',
   docsDir: 'src',
@@ -81,14 +81,23 @@ export default hopeTheme({
 
   plugins: {
     autoCatalog: {
-      shouldIndex: ({ path }) => path.startsWith('/posts/'),
+      orderGetter: ({ title, routeMeta }) => {
+        if (routeMeta.order)
+          return routeMeta.order as number
+        const prefix = title.match(/^\d+. /)
+        if (prefix)
+          return Number.parseInt(prefix[0])
+        const suffix = title.match(/\d+$/)
+        if (suffix)
+          return Number.parseInt(suffix[0])
+        return 0
+      },
     },
     blog: true,
     mdEnhance: {
       align: true,
       attrs: true,
       chart: false,
-      card: true,
       codetabs: true,
       container: true,
       demo: false,
@@ -147,7 +156,9 @@ export default hopeTheme({
           }
         }
       ],
-      presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
+      revealJs: {
+        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
+      },
       sub: true,
       sup: true,
       tabs: true,

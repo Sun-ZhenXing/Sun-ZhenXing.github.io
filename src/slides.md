@@ -6,6 +6,8 @@ sticky: 100
 layout: Slide
 ---
 
+<!-- markdownlint-disable -->
+
 @slidestart
 
 请查看 PPT 了解鸭梨🍐！
