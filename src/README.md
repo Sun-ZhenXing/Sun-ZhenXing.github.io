@@ -1,7 +1,7 @@
 ---
 home: true
 layout: BlogHome
-icon: home
+icon: fluent:home-24-filled
 title: 鸭梨
 heroImage: /logo.svg
 bgImage: /bg.svg

@@ -23,7 +23,10 @@ Windows 安卓子系统的进阶指南。
 
 如果你不想使用 Amazon Appstore，或者你需要自定义一些配置（如可 Root、安装面具等）可以安装 Google Play 版本的 WSA。
 
+WSA 的社区维护版本下载：[MustardChef/WSABuilds](https://github.com/MustardChef/WSABuilds)。
+
 甚至可以安装一些极客软件：
+
 - Termux
 - Magisk
 - SuperSU
@@ -114,6 +117,6 @@ pkg install tsu
 tsu
 ```
 
-## 4. 使用代理或 VPN
+<!-- ## 4. 使用代理或 VPN -->
 
-## 5. WSA 抓包指南
+<!-- ## 5. WSA 抓包指南 -->
