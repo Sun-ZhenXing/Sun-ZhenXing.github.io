@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{r as t,o as a,c,d as n}from"./app-32f6cd01.js";const r={};function l(s,_){const o=t("AutoCatalog");return a(),c("div",null,[n(o,{base:"/"})])}const p=e(r,[["render",l],["__file","catalog.html.vue"]]);export{p as default};
