@@ -9,6 +9,8 @@ tag:
   - 线性代数
 ---
 
+<!-- markdownlint-disable MD049 -->
+
 *The Matrix Cookbook* 部分翻译。
 
 <!-- more -->
@@ -114,7 +116,7 @@ $$
 
 $$
 \begin{align}
-  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A})  
+  \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A})
 \end{align}
 $$
 
@@ -133,7 +135,7 @@ $$
   \begin{aligned}
     \det(\boldsymbol{I} + \boldsymbol{A}) &= 1 + \det(\boldsymbol{A}) + \mathrm{Tr}(\boldsymbol{A}) + \frac{1}{2} + \mathrm{Tr}(\boldsymbol{A})^2 & \\
     &- \frac{1}{2}\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{6}\mathrm{Tr}(\boldsymbol{A})^3 \\
-    &- \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{3}\mathrm{Tr}(\boldsymbol{A}^3)    
+    &- \frac{1}{2}\mathrm{Tr}(\boldsymbol{A})\mathrm{Tr}(\boldsymbol{A}^2) + \frac{1}{3}\mathrm{Tr}(\boldsymbol{A}^3)
   \end{aligned}
 \end{equation}
 $$

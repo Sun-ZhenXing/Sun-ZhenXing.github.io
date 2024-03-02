@@ -1,4 +1,4 @@
-type Projects = { items: string[] }
+interface Projects { items: string[] }
 
 const projects: Projects = {
   items: [
@@ -12,7 +12,7 @@ const projects: Projects = {
     '/vuepress-opencv-notes/',
     '/vuepress-solid-template/',
     '/vuepress-tools-notes/',
-  ]
+  ],
 }
 
 export { projects }

@@ -29,7 +29,7 @@ tag:
 
 相反，基于块的语言可以完全消除语法错误，你的程序仅仅可能发生逻辑错误。块语言也更加直观，你可以在块列表中看到所有的程序构件和语言库。更有甚者，块可以被本地化任意的人类语言而不用改变编程语言的含义。
 
-![](./images/blockcode_ide.png)
+![blockcode_ide](./images/blockcode_ide.png)
 
 基于块的语言历史悠久，比较著名的有 [Lego Mindstorms](http://www.lego.com/en-us/mindstorms/)，[Alice3D](http://www.alice.org/index.php)，[StarLogo](http://education.mit.edu/projects/starlogo-tng)，还有 [Scratch](http://scratch.mit.edu/) 。还有一些在 Web 上可以访问的：[Blockly](https://developers.google.com/blockly/)，[AppInventor](http://appinventor.mit.edu/explore/)，[Tynker](http://www.tynker.com/) 以及更多。
 
@@ -72,6 +72,7 @@ Web 应用和传统桌面应用或者服务器应用的一个重大的区别就�
 项目中有八个源文件，`index.html` 和 `blocks.css` 是应用的基本结构和样式因而不加讨论。还有两个 JavaScript 文件也不过多讨论：`util.js` 包含了一些工具函数，`file.js` 用于加载和保存文件并且序列化脚本。
 
 剩下这些文件：
+
 - `blocks.js` 是块语言的抽象表示
 - `drag.js` 实现了语言的关键交互：允许用户从可选块（菜单）中拖拽块并组装成程序（脚本）
 - `menu.js` 包含了一些工具代码并且负责实际地执行用户程序
@@ -81,7 +82,7 @@ Web 应用和传统桌面应用或者服务器应用的一个重大的区别就�
 
 每一个块由一些 HTML 元素组成，由 CSS 设置样式，由一些 JavaScript 时间处理器处理拖拽并且修改输入参数。`blocks.js` 文件用于创建并管理这些元素，并且将它们组成单一的对象。当块被加入到菜单中时，绑定了一个 JavaScript 函数用来实现语言，因而脚本中的每个块在脚本执行的时候都要能找到其对应的函数并调用。
 
-![](./images/right_degrees.png)
+![right_degrees](./images/right_degrees.png)
 
 块有两种结构。一种拥有一个数值参数（具有默认值），还有一种作为其他块的容器。这些貌似很有限制，然而在一个大的系统中可以改进。在 Waterbear 中还有表达式块，可以作为参数进行传递；可以支持多个不同类型的值。在当前的状况下，我们试试只有一种类型的参数能干些什么。
 
@@ -121,6 +122,7 @@ function createBlock(name, value, contents) {
 ```
 
 我们有一些将块作为 DOM 处理的工具函数：
+
 - `blockContents(block)` 返回容器块的子块。如果参数是容器块则以列表的形式返回子块，否则返回 `null`
 - `blockValue(block)` 如果块中包含一个 `number` 类型的 `<input>` 则返回 `<input>` 的值，否则返回 `null`
 - `blockScript(block)` 返回块的 JSON 形式，便于序列化。其后方便恢复
@@ -178,6 +180,7 @@ var scriptBlocks = []; // 脚本区中的块
 ```
 
 根据拖动的起始点和结束位置，拖放会有不同的效果：
+
 - 从脚本区拖放到菜单区则删除 `dragTarget`（从脚本区中删除块）
 - 从脚本区拖放到脚本区则移动 `dragTarget`（在脚本区中移动现有块）
 - 从菜单区拖放到脚本区则复制 `dragTarget`（向脚本区中插入新块）
@@ -359,7 +362,7 @@ menuItem('Repeat', repeat, 10, []);
 
 `turtle.js` 是 turtle 块语言的实现部分。它不被其他任何代码依赖。因而这一部分可以很轻易的替换。
 
-![](./images/turtle_demo.png)
+![turtle_demo](./images/turtle_demo.png)
 
 海龟编程是图形编程的一种，由于 Logo 语言被大众所熟悉，简单的说就是一个携带着一只笔的龟头在屏幕上移动。你可以命令海龟头收起笔（不再画线，继续移动），放下笔（移动到哪儿，笔画到哪儿），移动指定数量步，或者转向多少度。仅仅依靠这些命令和循环，就可以画出静态图案。
 
@@ -521,6 +524,7 @@ Model-View-Controller（MVC）对于 80 年代的 Smalltalk 程序来说是一�
 ### 小实验使得失败不再可怕
 
 在这个微型的块语言中，我进行了下面的试验：
+
 - 使用 HTML5 的拖拽
 - 通过直接遍历 DOM 并调用绑定函数的方式来运行块
 - 将实际运行的代码从 HTML DOM 中分离

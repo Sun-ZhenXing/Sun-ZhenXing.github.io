@@ -5,4 +5,6 @@ icon: proposal
 sticky: 50
 ---
 
-<AutoCatalog base="/" />
+```component Catalog
+base: /
+```

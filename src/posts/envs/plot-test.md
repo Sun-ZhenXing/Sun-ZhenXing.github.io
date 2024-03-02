@@ -5,6 +5,8 @@ category:
   - 环境搭建
 ---
 
+<!-- markdownlint-disable MD033 -->
+
 绘图测试。
 
 <!-- more -->

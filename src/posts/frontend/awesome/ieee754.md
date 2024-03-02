@@ -9,6 +9,8 @@ tag:
   - IEEE754
 ---
 
+<!-- markdownlint-disable MD033 -->
+
 IEEE 754 浮点数的交互式演示。
 
 <!-- more -->

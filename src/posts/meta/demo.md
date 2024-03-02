@@ -1,5 +1,4 @@
 ---
-title: 博客编写示例
 date: 2022-12-04
 category:
   - 元定义
@@ -8,11 +7,11 @@ tag:
   - 博客配置
 ---
 
+# 博客编写示例
+
 使用 VuePress 编写博客的一些配置和示例。
 
 <!-- more -->
-
-# 博客编写示例
 
 ## 文章结构
 
@@ -100,4 +99,5 @@ VuePress 支持自定义 Vue 组件并在 MarkDown 中使用，主题包含了�
 <Badge text="徽章文字" color="#242378" />
 ```
 
+<!-- markdownlint-disable MD033 -->
 > 文字结尾应该有深蓝色的 *徽章文字* 徽章 <Badge text="徽章文字" />。

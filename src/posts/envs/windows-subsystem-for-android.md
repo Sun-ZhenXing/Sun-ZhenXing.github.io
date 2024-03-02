@@ -18,6 +18,7 @@ Windows 安卓子系统的使用简介。
 [Windows 安卓子系统](https://learn.microsoft.com/zh-cn/windows/android/wsa/)（Windows Subsystem for Android™，WSA）使 Windows 11 能够运行 Android 应用程序。
 
 首先确认你的 Windows 版本是否支持 WSA：
+
 - x64 或 ARM64 架构的现代处理器
 - Windows 11
 - 至少 8 GB 的 RAM
@@ -62,7 +63,7 @@ WSA 和 WSL 2 使用的不是一张网卡，WSA 使用 **以太网适配器 vEth
 
 下面的所有操作需要 [ADB 工具](https://developer.android.google.cn/studio/command-line/adb?hl=zh-cn)，如果没有安装，请先安装 ADB 工具。
 
-如果不希望使用开启调试，可以直接阅读 [3. 使用 WSA](#_3-使用-wsa) 中的相关说明进行使用。
+如果不希望使用开启调试，可以直接阅读 [3. 使用 WSA](#3-使用-wsa) 中的相关说明进行使用。
 
 :::
 

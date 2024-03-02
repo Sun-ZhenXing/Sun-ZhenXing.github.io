@@ -31,6 +31,4 @@ tag:
 
 ## 3. 使用奇异值分解进行 PCA
 
-
-
 @[code python](./src/pca.py)

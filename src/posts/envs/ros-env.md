@@ -159,9 +159,10 @@ rosrun turtlesim turtle_teleop_key
 
 ## 5. VS Code 开发环境
 
-这一步可选，如果直接在 [VS Code 官网](https://code.visualstudio.com/) 下载安装包，请确保下载 Linux x64	`.deb` 版本。
+这一步可选，如果直接在 [VS Code 官网](https://code.visualstudio.com/) 下载安装包，请确保下载 Linux x64 `.deb` 版本。
 
 如果需要配置请安装：
+
 - Python 扩展包
 - CMake 扩展包
 - C/C++ 语言支持

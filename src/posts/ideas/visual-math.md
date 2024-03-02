@@ -19,7 +19,7 @@ VisualMath 计划的一些想法和成果。
 
 后来希望能编写一个程序，实现数学计算的可视化，就自己编写了一个简易的 [Python 代数计算器](https://github.com/Sun-ZhenXing/VisualMath)，大概长这个样子：
 
-![](https://pic.rmb.bdstatic.com/bjh/e4813caf014f57742f4e6fa1090b2769.jpeg)
+![e4813caf014f57742f4e6fa1090b2769](https://pic.rmb.bdstatic.com/bjh/e4813caf014f57742f4e6fa1090b2769.jpeg)
 
 可以将输入的表达式交给 Python 执行，然后使用 SymPy 计算，转换为 LaTeX 并在前端渲染。例如，我输入 `solve x^3 - 2x^2 - 3` 的时候，下面会渲染：
 
@@ -42,6 +42,7 @@ $$
 我希望我们的前端版本的 Wolfram Alpha 使用 Python 语法，在前端基于 WebAssembly 执行 Python 语句并获得结果，可以扩展模块或使用自己的模块。
 
 用过 Wolfram Alpha 的朋友一定知道它的强大，通过简单的一句话就能判断你想获得哪些数据，我希望实现几个页面，并加入一些可选功能。当然，这取决于我到底想做成什么样：
+
 - 基础计算
 - 代码编写执行
 - 图表和函数可视化
@@ -54,6 +55,7 @@ def f(x: int) -> int:
 ```
 
 这个设想需要实现一个子项目，所以还是有点复杂，以后有机会可以实现部分组件：
+
 - 代码编辑器，可使用开源组件
 - LaTeX 识别，可使用第三方 API
 - 公式编辑器，可使用开源组件
@@ -62,6 +64,7 @@ def f(x: int) -> int:
 - 部分 NLP 模型
 
 可能的参考点：
+
 - 几何图形的 JS 库
 - [Octave Online](https://octave-online.net/)
 - 动画（SVG 动画或者 Canvas 动画）

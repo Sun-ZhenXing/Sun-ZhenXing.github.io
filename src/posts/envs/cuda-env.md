@@ -15,6 +15,7 @@ CUDA 安装、环境和版本等问题。
 ## 1. CUDA 安装
 
 不同的概念：
+
 - 显卡型号
 - 显卡计算能力（Compute Capability）
 - 驱动版本
@@ -25,9 +26,11 @@ CUDA 安装、环境和版本等问题。
 - PyTorch 依赖的 CUDA 和 CuDNN
 
 资源：
+
 - [各种版本 CUDA 的下载页面](https://developer.nvidia.com/cuda-toolkit-archive)
 
 参见：
+
 - [NVVP 错误处理](https://mp.weixin.qq.com/s?__biz=MzI2NDkwNzU4Mg==&mid=2247483663&idx=1&sn=a5e6c06438523d0a2a1b303f35bbf4b2)
 
 根据您的问题，您需要使用C++和OpenCV编写一个函数来打半透明斜条纹。您可以使用OpenCV的cv::Mat类来创建一个图像，然后使用cv::rectangle函数来绘制矩形。要绘制斜条纹，您可以使用cv::line函数。最后，您可以使用cv::addWeighted函数将图像与透明度相乘以创建半透明效果。

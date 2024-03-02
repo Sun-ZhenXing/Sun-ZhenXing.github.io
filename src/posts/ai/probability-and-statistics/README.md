@@ -6,4 +6,5 @@ article: false
 index: false
 ---
 
-<AutoCatalog />
+```component Catalog
+```

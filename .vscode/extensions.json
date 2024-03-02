@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "yzhang.markdown-all-in-one",
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "vstirbu.vscode-mermaid-preview",
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+    "bierner.markdown-mermaid"
+  ]
+}

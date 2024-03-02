@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/* eslint-disable vue/require-component-is */
 import { computed, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
@@ -9,11 +10,11 @@ const expr = ref('x')
 const error = ref('')
 const exprInputId = computed(() => `${props.id}-expr`)
 
-const updateExpr = () => {
+function updateExpr() {
   const width = 600
   const height = 400
 
-  const exprString = expr.value;
+  const exprString = expr.value
   setTimeout(() => {
     if (!exprString) {
       error.value = '请输入函数表达式'
@@ -21,16 +22,17 @@ const updateExpr = () => {
     }
     try {
       (window as any).functionPlot && (window as any).functionPlot({
-        target: `#${props.id}`,
-        width,
-        height,
-        grid: true,
         data: [{
           fn: exprString,
-        }]
+        }],
+        grid: true,
+        height,
+        target: `#${props.id}`,
+        width,
       })
       error.value = ''
-    } catch (e) {
+    }
+    catch (e) {
       error.value = e.message
     }
   }, 100)
@@ -48,11 +50,13 @@ watch(() => expr.value, () => {
 </script>
 
 <template>
-  <component is="script" src="https://unpkg.com/function-plot/dist/function-plot.js"></component>
+  <component is="script" src="https://unpkg.com/function-plot/dist/function-plot.js" />
   <label :for="exprInputId">函数表达式</label>
-  <input type="text" :id="exprInputId" autocomplete="off" v-model="expr" placeholder="如 x^2">
-  <div class="plot-area" :id="props.id" v-if="expr"></div>
-  <div class="plot-error" v-show="error">{{ error }}</div>
+  <input :id="exprInputId" v-model="expr" autocomplete="off" placeholder="如 x^2" type="text">
+  <div v-if="expr" :id="props.id" class="plot-area" />
+  <div v-show="error" class="plot-error">
+    {{ error }}
+  </div>
 </template>
 
 <style lang="scss" scoped>

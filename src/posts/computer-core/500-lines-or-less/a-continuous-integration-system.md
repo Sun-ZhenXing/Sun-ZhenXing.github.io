@@ -66,6 +66,7 @@ CI 系统还需要一个报告形式（比如一个网页），这样触发测�
 ## 项目的文件结构
 
 项目中每个组件的 Python 文件结构如下：
+
 - 监听器（`repo_observer.py`）
 - 测试样例调度器（`dispatcher.py`）
 - 测试运行器（`test_runner.py`）
@@ -85,8 +86,8 @@ CI 系统还需要一个报告形式（比如一个网页），这样触发测�
 我们称这个用于测试的项目为 `test_repo`：
 
 ```bash
-mkdir test_repo 
-cd test_repo 
+mkdir test_repo
+cd test_repo
 git init
 ```
 
@@ -122,6 +123,7 @@ git clone /path/to/test_repo test_repo_clone_runner
 监听器的任务是监听代码库中的改动，并在发现改动是通知测试样例分配器。为了保证我们的 CI 系统与各种版本控制系统（并不是所有的 VCS 都有内置的通知系统）都能够兼容，我们设定 CI 系统定时检查代码库是否有新的提交，而不是等待 VCS 在代码提交时发送通知。
 
 监听器会定时轮询代码库，当有新的提交时，监听器会向分配器推送需要运行测试的代码的版本 ID。监听器的轮询过程是：
+
 1. 首先，在监听器的储存空间中得到当前的提交版本；
 2. 其次，将本地库更新至这个版本；
 3. 最后，将这个版本与远程库最近一次的提交 ID 进行比对。
@@ -132,7 +134,7 @@ git clone /path/to/test_repo test_repo_clone_runner
 
 同样，我们还需要为监听器提供测试用例分配器的地址，这样监听器推送的消息才能传递到分配器中。在运行监听器时，可以通过命令行参数 `--dispatcher-server` 来传递分配器的地址。如果不手动传入地址，分配器的默认地址取值为：`localhost:8888`。
 
-```python 
+```python
 def poll():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dispatcher-server",
@@ -168,16 +170,16 @@ def poll():
 
 首先，我们的脚本源自于一个叫 `run_or_fail.sh` 的文件。`run_or_fail.sh` 提供了一些 Shell 脚本的辅助函数。通过这些函数我们可以运行指定的脚本并可以在运行出错时输出错误信息。
 
-```bash 
+```bash
 #!/bin/bash
 
-source run_or_fail.sh 
+source run_or_fail.sh
 ```
 
 接下来，我们的脚本会试图删除`.commit_id`文件。因为`repo_observer.py`会不断循环的调用`updaterepo.sh`，如果在上一次的调用中产生了`.commit_id`文件，并且其中储存的版本 ID 我们在上一次轮询中已经完成了测试，就会造成混乱。所以我们在每次都会先删除上一次的`.commit_id`文件，以免产生混乱。
 
 ```bash
-bash rm -f .commit_id 
+bash rm -f .commit_id
 ```
 
 在删除了文件之后（在文件已经存在的情况下），脚本会检查我们监听的代码库是否存在，再把`.commit_id`更新到最近的一次提交，保证`.commit_id`文件与代码库提交 ID 之间的同步。
@@ -568,7 +570,7 @@ run_or_fail "Could not update to given commit hash" git reset --hard "$COMMIT"
 
 下图是该系统的概述图。图中假设所有三个文件（`repo_observer.py`、`dispatcher.py` 和 `test_runner.py`）都已在运行，并描述了每个进程在新的提交发生时所采取的操作。
 
-![](./images/3-diagram.png)
+![diagram](./images/3-diagram.png)
 
 ### 运行代码
 
@@ -579,7 +581,6 @@ python dispatcher.py
 ```
 
 开一个新的的 Shell，我们启动测试运行器（这样它就可以在分配器中注册了）：
-
 
 ```bash
 python test_runner.py <path/to/test_repo_clone_runner>

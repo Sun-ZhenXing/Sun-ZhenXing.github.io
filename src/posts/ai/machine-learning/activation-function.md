@@ -29,7 +29,7 @@ $$
 
 <!-- plot(x, xlabel='', ylabel='').save('x.svg') -->
 
-![](./images/x.svg)
+![demo](./images/x.svg)
 
 ### 1.2 单位阶跃函数
 
@@ -48,7 +48,7 @@ $$
 
 <!-- plot(Piecewise((0, x < 0), (1, True)), xlabel='', ylabel='').save('step.svg') -->
 
-![](./images/step.svg)
+![demo](./images/step.svg)
 
 ### 1.3 Sigmoid 函数
 
@@ -67,7 +67,7 @@ $$
 
 <!-- plot(1 / (1 + exp(-x)), xlabel='', ylabel='').save('sigmoid.svg') -->
 
-![](./images/sigmoid.svg)
+![demo](./images/sigmoid.svg)
 
 ### 1.4 双曲正切（Tanh）
 
@@ -90,7 +90,7 @@ $$
 
 <!-- plot(tanh(x), xlabel='', ylabel='').save('tanh.svg') -->
 
-![](./images/tanh.svg)
+![demo](./images/tanh.svg)
 
 ### 1.5 反正切（Arctan）
 
@@ -104,7 +104,7 @@ $$
 
 <!-- plot(atan(x), xlabel='', ylabel='').save('arctan.h') -->
 
-![](./images/arctan.svg)
+![demo](./images/arctan.svg)
 
 ### 1.6 Softsign 函数
 
@@ -118,7 +118,7 @@ $$
 
 <!-- plot(x / (1 + Abs(x)), xlabel='', ylabel='').save('softsign.svg') -->
 
-![](./images/softsign.svg)
+![demo](./images/softsign.svg)
 
 ### 1.7 反平方根函数（ISRU）
 
@@ -132,7 +132,7 @@ $$
 
 <!-- plot(x / sqrt(1 + 0.25 * x ** 2), xlabel='', ylabel='').save('ISRU.svg') -->
 
-![](./images/ISRU.svg)
+![demo](./images/ISRU.svg)
 
 ## 2. 线性激活单元
 
@@ -151,7 +151,7 @@ $$
 
 <!-- plot(Max(x, 0), xlabel='', ylabel='').save('ReLU.svg') -->
 
-![](./images/ReLU.svg)
+![demo](./images/ReLU.svg)
 
 ### 2.2 带泄露的线性整流函数（Leakly ReLU）
 
@@ -170,7 +170,7 @@ $$
 
 <!-- plot(Max(x, 0.05 * x), xlabel='', ylabel='').save('LeaklyReLU.svg') -->
 
-![](./images/LeaklyReLU.svg)
+![demo](./images/LeaklyReLU.svg)
 
 ### 2.3 指数线性单元（ELU）
 
@@ -190,7 +190,7 @@ $$
 
 <!-- plot(Piecewise((0.2 * (exp(x) - 1), x < 0), (x, True)), xlabel='', ylabel='').save('ELU.svg') -->
 
-![](./images/ELU.svg)
+![demo](./images/ELU.svg)
 
 ### 2.4 扩展型指数线性单元（SELU）
 
@@ -219,7 +219,7 @@ $$
 
 <!-- plot(1.0507009873554804934193349852946 * Piecewise((1.6732632423543772848170429916717 * (exp(x) - 1), x < 0), (x, True)), xlabel='', ylabel='').save('SELU') -->
 
-![](./images/SELU.svg)
+![demo](./images/SELU.svg)
 
 ### 2.5 SiLU 函数（Swish 函数）
 
@@ -241,7 +241,7 @@ $$
 
 <!-- plot(x / (1 + exp(-x)), xlabel='', ylabel='').save('SiLU.svg') -->
 
-![](./images/SiLU.svg)
+![demo](./images/SiLU.svg)
 
 ### 2.6 Softplus
 
@@ -255,19 +255,19 @@ $$
 
 <!-- plot(log(1 + exp(x)), xlabel='', ylabel='').save('softplus.svg') -->
 
-![](./images/softplus.svg)
+![demo](./images/softplus.svg)
 
 ### 2.6 Hard-Swish
 
-*@TODO*
+<!-- *@TODO* -->
 
 ### 2.7 Mish
 
-*@TODO*
+<!-- *@TODO* -->
 
 ### 2.8 GELU
 
-*@TODO*
+<!-- *@TODO* -->
 
 ## 3. 多参数激活函数
 
@@ -281,4 +281,4 @@ $$
 
 ### 3.2 Maxout 函数
 
-*@TODO*
+<!-- *@TODO* -->

@@ -2,57 +2,67 @@
  * 需要绘制的函数
  * @param {number} x
  */
-function func(x) {
-  return (x - 1) ** 2;
+export function func(x) {
+  return (x - 1) ** 2
 }
 
 class FunctionPlot {
   constructor(func, start = -5.0, end = 5.0, span = 0.05) {
-    this.func = func;
-    this.start = start;
-    this.end = end;
-    this.span = span;
-    this.data = this.generateData();
+    this.func = func
+    this.start = start
+    this.end = end
+    this.span = span
+    this.data = this.generateData()
   }
 
   generateData() {
-    const data = [];
+    const data = []
     for (let i = this.start; i <= this.end; i += this.span) {
       data.push([
-        parseFloat(i.toFixed(5)),
-        parseFloat(this.func(i).toFixed(5))
-      ]);
+        Number.parseFloat(i.toFixed(5)),
+        Number.parseFloat(this.func(i).toFixed(5)),
+      ])
     }
-    return data;
+    return data
   }
 }
 
 const option = {
-  xAxis: {
-    name: 'x',
-    minorTick: {
-      show: true
+  // 数据集
+  series: [
+    {
+      // 是否裁剪超出坐标系部分的图形
+      clip: true,
+      // 数据
+      data: new FunctionPlot(x => -0.5 * Math.cos(10 * x) + 0.3 * Math.sin(2 * x) - x + 5, 0).generateData(),
+      // 显示数据点标记
+      showSymbol: false,
+      type: 'line',
     },
-    minorSplitLine: {
-      show: true
-    }
-  },
-  yAxis: {
-    name: 'J(w)',
-    min: -1,
-    max: 5,
-    minorTick: {
-      show: true
+    {
+      // 是否裁剪超出坐标系部分的图形
+      clip: true,
+      // 数据
+      data: new FunctionPlot(x => -x + 5, 0).generateData(),
+      // 显示数据点标记
+      showSymbol: false,
+      type: 'line',
     },
-    minorSplitLine: {
-      show: true
-    }
-  },
+  ],
   tooltip: {
-    trigger: "axis",
     axisPointer: {
-      type: "cross"
-    }
+      type: 'cross',
+    },
+    trigger: 'axis',
+  },
+  xAxis: {
+    minorSplitLine: {
+      show: true,
+    },
+    minorTick: {
+      show: true,
+    },
+    name: 'x',
   },
 
   // 缩放
@@ -75,27 +85,17 @@ const option = {
   //   }
   // ],
 
-  // 数据集
-  series: [
-    {
-      type: 'line',
-      // 显示数据点标记
-      showSymbol: false,
-      // 是否裁剪超出坐标系部分的图形
-      clip: true,
-      // 数据
-      data: new FunctionPlot(x => - 0.5 * Math.cos(10 * x) + 0.3 * Math.sin(2 * x) - x + 5, 0).generateData()
+  yAxis: {
+    max: 5,
+    min: -1,
+    minorSplitLine: {
+      show: true,
     },
-    {
-      type: 'line',
-      // 显示数据点标记
-      showSymbol: false,
-      // 是否裁剪超出坐标系部分的图形
-      clip: true,
-      // 数据
-      data: new FunctionPlot(x => - x + 5, 0).generateData()
-    }
-  ]
-};
+    minorTick: {
+      show: true,
+    },
+    name: 'J(w)',
+  },
+}
 
-console.log(JSON.stringify(option));
+console.log(JSON.stringify(option))

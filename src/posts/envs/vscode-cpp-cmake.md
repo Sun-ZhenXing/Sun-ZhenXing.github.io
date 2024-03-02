@@ -21,6 +21,7 @@ tag:
 Linux 和 Mac 可使用系统的编译后端，也可以安装 Clang 等编译套件。
 
 可选的后端有：
+
 - 系统默认
 - Clang
 - MinGW
@@ -33,6 +34,7 @@ Windows 推荐使用 MSVC（Microsoft Visual Studio）作为编译后端，因�
 :::
 
 安装 MSVC 编译套件：
+
 1. [下载 Visual Studio](https://visualstudio.microsoft.com/zh-hans/downloads/)，并安装
 2. 安装时选择 C/C++ 的支持
 
@@ -59,6 +61,7 @@ cmake --version
 ### 2.1 安装扩展
 
 下面的包可能有变动，只需选择官方的版本即可：
+
 1. C/C++ 语言包
 2. C/C++ 扩展包
 3. CMake 包
@@ -95,6 +98,7 @@ cmake --version
 ```
 
 注意几个要点：
+
 - `includePath` 为语法检查的 Include，和 `CMakeLists.txt` 中的 Include 不冲突
 - `windowsSdkVersion` 必须是当前 Windows 可用的 SDK 版本
 - `compilerPath` 必须在路径（PATH）中
@@ -130,6 +134,7 @@ int main() {
 ```
 
 在状态栏选择：
+
 1. CMake: Release
 2. Visual Studio 2019 Release: amd64
 

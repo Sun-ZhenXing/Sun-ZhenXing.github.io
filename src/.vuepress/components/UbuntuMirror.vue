@@ -1,31 +1,33 @@
 <script setup lang="ts">
-type SoftwareItem = {
+interface SoftwareItem {
   name: string
   software: string[]
   src: boolean
 }
 
-type MirrorItem = {
+export interface MirrorItem {
+  last_sync: null | string
+  list: SoftwareItem[] | null
   provider: string
-  version: string
-  url: string
-  scheme: string[],
-  last_sync: string | null
+  scheme: string[]
   status: string
   support_all: boolean
-  list: SoftwareItem[] | null
+  url: string
+  version: string
 }
 
-type ProviderItem = {
-  name: string
-  title: string
-  url: string
+export interface ProviderItem {
   country: string
+  name: string
   priority: number
   remark: string
-};
+  title: string
+  url: string
+}
 </script>
 
-<template></template>
+<template>
+  <h2>镜像</h2>
+</template>
 
 <style lang="scss" scoped></style>

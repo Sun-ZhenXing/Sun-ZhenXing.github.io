@@ -211,11 +211,11 @@ $$
 
 事实上，如果我们想可视化 $J(w,\,b)$，这将会是一个三维的函数（表现为曲面），
 
-![](./images/j_wb.svg)
+![j_wb](./images/j_wb.svg)
 
 我们可以通过它来绘制等高图，等高线上的每一个点的损失值都相同。
 
-![](./images/counter.svg)
+![counter](./images/counter.svg)
 
 在本节的 Jupyter Notebook 你可以看到交互式的演示。
 

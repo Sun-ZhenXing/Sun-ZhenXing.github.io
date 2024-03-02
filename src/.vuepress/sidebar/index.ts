@@ -1,90 +1,90 @@
 import { sidebar } from 'vuepress-theme-hope'
 
 export const Sidebar = sidebar({
-  '/posts/envs/': [
-    {
-      text: '环境搭建',
-      icon: 'build',
-      children: 'structure',
-    },
-    '/posts/intro'
+  '/': [
+    '/posts/meta',
+    '/slides',
+    '/posts/intro',
   ],
   '/posts/ai/': [
     {
-      text: '人工智能',
-      icon: 'creative',
       children: [
         {
+          children: 'structure',
+          collapsible: true,
           prefix: 'probability-and-statistics/',
-          collapsible: true,
           text: '概率与统计',
-          children: 'structure'
         },
         {
+          children: 'structure',
+          collapsible: true,
           prefix: 'machine-learning',
-          collapsible: true,
           text: '机器学习',
-          children: 'structure'
         },
         {
-          prefix: 'linear-algebra/',
+          children: 'structure',
           collapsible: true,
+          prefix: 'linear-algebra/',
           text: '线性代数',
-          children: 'structure'
-        }
-      ]
+        },
+      ],
+      icon: 'creative',
+      text: '人工智能',
     },
-    '/posts/intro'
+    '/posts/intro',
   ],
   '/posts/backend/': [
     {
-      text: '后端',
+      children: 'structure',
       icon: 'setting',
-      children: 'structure'
+      text: '后端',
     },
-    '/posts/intro'
+    '/posts/intro',
   ],
   '/posts/computer-core/': [
     {
-      text: '计算机核心知识',
+      children: 'structure',
       icon: 'computer',
-      children: 'structure'
+      text: '计算机核心知识',
     },
-    '/posts/intro'
+    '/posts/intro',
+  ],
+  '/posts/envs/': [
+    {
+      children: 'structure',
+      icon: 'build',
+      text: '环境搭建',
+    },
+    '/posts/intro',
   ],
   '/posts/frontend/': [
     {
-      text: '前端',
+      children: 'structure',
       icon: 'page',
-      children: 'structure'
+      text: '前端',
     },
-    '/posts/intro'
+    '/posts/intro',
   ],
   '/posts/ideas/': [
     {
-      text: '奇思妙想',
+      children: 'structure',
       icon: 'ability',
-      children: 'structure',
+      text: '奇思妙想',
     },
-    '/posts/intro'
-  ],
-  '/posts/meta/': [
-    {
-      text: '博客构建引导',
-      icon: 'setting',
-      children: 'structure',
-    },
-    '/slides',
-    '/posts/intro'
+    '/posts/intro',
   ],
   '/posts/intro': [
     '/posts/meta',
     '/slides',
     '/posts/intro',
   ],
-  '/': [
-    '/posts/meta',
+  '/posts/meta/': [
+    {
+      children: 'structure',
+      icon: 'setting',
+      text: '博客构建引导',
+    },
     '/slides',
     '/posts/intro',
-  ]
+  ],
 })

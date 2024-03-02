@@ -28,6 +28,7 @@ catkin_make
 ```
 
 创建名为 `plumbing_pub_sub` 的功能包并添加相关依赖：
+
 1. 在 VS Code 中按 `Ctrl + Shift + P` 使用命令面板，输入 `ROS: Create Catkin Package` 回车
 2. 接着输入包名 `plumbing_pub_sub`
 3. 输入依赖项 `roscpp rospy std_msgs`
@@ -196,6 +197,7 @@ rqt_graph
 ## 2. 服务通信
 
 创建功能包名为 `plumbing_server_client` 并添加相关依赖：
+
 1. 在 VS Code 中按 `Ctrl + Shift + P` 使用命令面板，输入 `ROS: Create Catkin Package` 回车
 2. 接着输入包名 `plumbing_server_client`
 3. 输入依赖项 `roscpp rospy std_msgs`
@@ -259,14 +261,12 @@ import rospy
 from plumbing_server_client.srv import (Multiply, MultiplyRequest,
                                         MultiplyResponse)
 
-
 def do_req(req: MultiplyRequest):
     res = req.num1 * req.num2
     rospy.loginfo('got data: %d x %d = %d', req.num1, req.num2, res)
     resp = MultiplyResponse(res)
     resp.sum = res
     return resp
-
 
 if __name__ == '__main__':
     rospy.init_node('MulService')

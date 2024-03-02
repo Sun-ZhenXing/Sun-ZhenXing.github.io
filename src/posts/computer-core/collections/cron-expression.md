@@ -104,14 +104,12 @@ print(datetime.now().strftime("%B"))
 locale.setlocale(locale.LC_ALL, "zh_CN.UTF-8")
 print(datetime.now().strftime("%B"))
 
-
 CRON = "2 13 * 5 *"
 base = datetime(2023, 8, 15, 4, 46)
 iter = croniter(CRON, base)
 print(iter.get_next(datetime))
 print(iter.get_next(datetime))
 print(iter.get_next(datetime))
-
 
 descriptor = ExpressionDescriptor(
     expression=CRON,
@@ -134,7 +132,6 @@ from cron_descriptor import Options, get_description
 options = Options()
 options.locale_code = "zh_CN"
 
-
 # current locale
 print(locale.getdefaultlocale())
 
@@ -144,7 +141,6 @@ print(get_description(cron_express, options))
 
 # set new locale
 locale.setlocale(locale.LC_ALL, "zh_CN.UTF-8")
-
 
 print(get_description(cron_express))
 print(get_description(cron_express, options))

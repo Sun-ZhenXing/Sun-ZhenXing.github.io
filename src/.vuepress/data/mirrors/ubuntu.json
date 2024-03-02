@@ -1,123 +1,123 @@
 {
-    "package_manager": "apt",
-    "release": "ubuntu",
-    "template": [
-        {
-            "name": "default",
-            "software": [
-                "main",
-                "restricted",
-                "universe",
-                "multiverse"
-            ],
-            "src": true
-        },
-        {
-            "name": "security",
-            "software": [
-                "main",
-                "restricted",
-                "universe",
-                "multiverse"
-            ],
-            "src": true
-        },
-        {
-            "name": "updates",
-            "software": [
-                "main",
-                "restricted",
-                "universe",
-                "multiverse"
-            ],
-            "src": true
-        },
-        {
-            "name": "proposed",
-            "software": [
-                "main",
-                "restricted",
-                "universe",
-                "multiverse"
-            ],
-            "src": true
-        },
-        {
-            "name": "backports",
-            "software": [
-                "main",
-                "restricted",
-                "universe",
-                "multiverse"
-            ],
-            "src": true
-        }
-    ],
-    "mirrors": [
-        {
-            "provider": "tsinghua",
-            "version": "jammy",
-            "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
-            "scheme": [
-                "http",
-                "https"
-            ],
-            "last_sync": null,
-            "status": "active",
-            "support_all": true,
-            "list": null
-        },
-        {
-            "provider": "tsinghua",
-            "version": "focal",
-            "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
-            "scheme": [
-                "http",
-                "https"
-            ],
-            "last_sync": null,
-            "status": "active",
-            "support_all": true,
-            "list": null
-        },
-        {
-            "provider": "tsinghua",
-            "version": "bionic",
-            "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
-            "scheme": [
-                "http",
-                "https"
-            ],
-            "last_sync": null,
-            "status": "active",
-            "support_all": true,
-            "list": null
-        },
-        {
-            "provider": "tsinghua",
-            "version": "xenial",
-            "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
-            "scheme": [
-                "http",
-                "https"
-            ],
-            "last_sync": null,
-            "status": "active",
-            "support_all": true,
-            "list": null
-        },
-        {
-            "provider": "tsinghua",
-            "version": "trusty",
-            "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
-            "scheme": [
-                "http",
-                "https"
-            ],
-            "last_sync": null,
-            "status": "active",
-            "support_all": true,
-            "list": null
-        }
-    ]
+  "package_manager": "apt",
+  "release": "ubuntu",
+  "template": [
+    {
+      "name": "default",
+      "software": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
+      ],
+      "src": true
+    },
+    {
+      "name": "security",
+      "software": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
+      ],
+      "src": true
+    },
+    {
+      "name": "updates",
+      "software": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
+      ],
+      "src": true
+    },
+    {
+      "name": "proposed",
+      "software": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
+      ],
+      "src": true
+    },
+    {
+      "name": "backports",
+      "software": [
+        "main",
+        "restricted",
+        "universe",
+        "multiverse"
+      ],
+      "src": true
+    }
+  ],
+  "mirrors": [
+    {
+      "provider": "tsinghua",
+      "version": "jammy",
+      "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "scheme": [
+        "http",
+        "https"
+      ],
+      "last_sync": null,
+      "status": "active",
+      "support_all": true,
+      "list": null
+    },
+    {
+      "provider": "tsinghua",
+      "version": "focal",
+      "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "scheme": [
+        "http",
+        "https"
+      ],
+      "last_sync": null,
+      "status": "active",
+      "support_all": true,
+      "list": null
+    },
+    {
+      "provider": "tsinghua",
+      "version": "bionic",
+      "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "scheme": [
+        "http",
+        "https"
+      ],
+      "last_sync": null,
+      "status": "active",
+      "support_all": true,
+      "list": null
+    },
+    {
+      "provider": "tsinghua",
+      "version": "xenial",
+      "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "scheme": [
+        "http",
+        "https"
+      ],
+      "last_sync": null,
+      "status": "active",
+      "support_all": true,
+      "list": null
+    },
+    {
+      "provider": "tsinghua",
+      "version": "trusty",
+      "url": "mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+      "scheme": [
+        "http",
+        "https"
+      ],
+      "last_sync": null,
+      "status": "active",
+      "support_all": true,
+      "list": null
+    }
+  ]
 }

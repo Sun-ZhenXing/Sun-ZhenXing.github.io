@@ -15,6 +15,7 @@ tag:
 ## 1. 基础配置
 
 配置项目：
+
 - `src/.vuepress/config.ts` 配置
 - `src/README.md` 主页配置
 - `src/.vuepress/navbar/` 导航栏配置
@@ -31,6 +32,7 @@ tag:
 ## 2. 页面结构
 
 页面通常包含下面的部分：
+
 - [路径导航](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/breadcrumb.html)
 - [标题和页面信息](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/page-info.html)
 - [TOC (文章标题列表)](https://vuepress-theme-hope.github.io/v2/zh/guide/layout/page.html#标题列表)

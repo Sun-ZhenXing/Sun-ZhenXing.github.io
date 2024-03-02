@@ -18,7 +18,7 @@ tag:
 
 收到邮件后 [配置爬虫](https://crawler.algolia.com/admin)，选择你的应用，你将下面的配置界面。
 
-![](./images/2023-02-23-21-33-10.png)
+![DocSearch](./images/2023-02-23-21-33-10.png)
 
 在 Editor 可以编辑爬虫设置，我们主要用这个功能来自定义我们的爬虫设置。
 
@@ -151,10 +151,10 @@ export default {
 
 如图，点击 **View in Algolia**，然后登录。
 
-![](./images/2023-02-23-21-30-55.png)
+![View in Algolia](./images/2023-02-23-21-30-55.png)
 
 选择正确的应用，然后点击 **Search**，即可看到下图的内容，选择上方的 **Index**，然后创建新的 Index，请保持每个应用的前缀一致以方便区分。
 
-![](./images/2023-02-23-21-45-25.png)
+![Index](./images/2023-02-23-21-45-25.png)
 
 然后在不同的 Action 中指定你创建的 Index 名称即可。

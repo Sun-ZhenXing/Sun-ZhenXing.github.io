@@ -7,8 +7,9 @@ tag:
   - '500 Lines or Less'
 ---
 
-第一章：500 Lines or Less 介绍。
+<!-- markdownlint-disable MD033 -->
 
+第一章：500 Lines or Less 介绍。
 
 <!-- more -->
 

@@ -97,7 +97,7 @@ $$
 
 很神奇？可以使用项的选择来解释，也可以使用二项式定理解释，具体可以自行理解。
 
-**生成函数**
+<!-- **生成函数** -->
 
 作者在此举例了斐波那契数列的一种非常有趣的解法。
 
@@ -139,4 +139,4 @@ $$
 \end{aligned}
 $$
 
-[^1]: <https://puzzlingthroughmed.com/olympiad-counting-puzzle/>
+<!-- [^1]: <https://puzzlingthroughmed.com/olympiad-counting-puzzle/> -->

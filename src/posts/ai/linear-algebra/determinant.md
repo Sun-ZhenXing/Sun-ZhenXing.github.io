@@ -1,5 +1,4 @@
 ---
-title: 行列式
 date: 2023-07-03
 category:
   - AI

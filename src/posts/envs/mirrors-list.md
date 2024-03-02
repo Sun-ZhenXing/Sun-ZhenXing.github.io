@@ -26,6 +26,7 @@ tag:
 推荐：[官方镜像列表](https://launchpad.net/ubuntu/+cdmirrors)。
 
 推荐镜像列表：
+
 1. [Ubuntu 官方镜像](https://ubuntu.com/download)
 2. [清华大学镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/)
 3. [华为云镜像](https://repo.huaweicloud.com/ubuntu-releases/)
@@ -50,6 +51,7 @@ tag:
 推荐：[官方镜像列表](https://www.debian.org/CD/http-ftp/)。
 
 推荐镜像列表：
+
 1. [Debian 官方镜像](https://www.debian.org/CD/http-ftp/)
 2. [清华大学镜像](https://mirrors.tuna.tsinghua.edu.cn/debian-cd/)
 3. [阿里云镜像](https://mirrors.aliyun.com/debian-cd/)
@@ -181,6 +183,7 @@ deb https://security.debian.org/debian-security bullseye-security main contrib n
 ```
 
 参考链接：
+
 - 清华大学：<https://mirrors.tuna.tsinghua.edu.cn/help/debian/>
 - 阿里云：<https://mirrors.tuna.tsinghua.edu.cn/help/debian/>
 
@@ -369,6 +372,7 @@ pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/
 :::
 
 推荐镜像列表：
+
 1. [清华大学镜像](https://pypi.tuna.tsinghua.edu.cn/simple/)
 2. [阿里云镜像](https://mirrors.aliyun.com/pypi/simple/)
 3. [中国科技大学镜像](https://pypi.mirrors.ustc.edu.cn/simple/)
@@ -377,6 +381,7 @@ pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/
 6. [北京外国语大学镜像](https://mirrors.bfsu.edu.cn/pypi/web/simple/)
 
 第三方列表合集：
+
 1. [校园网联合镜像站](https://mirrors.cernet.edu.cn/list/pypi)（包含国内众多高校）
 
 ## 4. Java 系列
@@ -384,10 +389,12 @@ pip config set global.extra-index-url "https://pypi.tuna.tsinghua.edu.cn/simple/
 ### 4.1 JDK / OpenJDK 镜像
 
 推荐镜像列表：
+
 1. [华为云镜像](https://mirrors.huaweicloud.com/openjdk/)（旧版本 [访问此处](https://repo.huaweicloud.com/java/jdk/)）
 2. [清华大学镜像 AdoptOpenJDK](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/)
 
 下游版本：
+
 1. [Amazon Corretto](https://aws.amazon.com/cn/corretto/)
 2. [Zulu JDK](https://www.azul.com/downloads/?package=jdk)
 3. [阿里巴巴 Dragonwell](https://dragonwell-jdk.io/#/index)

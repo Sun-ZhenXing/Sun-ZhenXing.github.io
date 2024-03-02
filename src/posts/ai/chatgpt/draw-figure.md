@@ -100,6 +100,7 @@ graph TD
 ## 3. 绘制复杂图形
 
 有几种思路：
+
 1. 使用 ChatGPT 输出 SVG 代码，类似于上述方法
 2. 使用 ChatGPT 输出生成模型的提示词（Prompt），然后使用对应模型进行生成
 
@@ -115,6 +116,6 @@ color: rgba(226, 212, 255, 0.2)
 
 目前 GPT-3.5 的输出：
 
-![](./images/strawberry.svg)
+![strawberry](./images/strawberry.svg)
 
 显然这和草莓并没有什么关系，但这已经是准确的 SVG 代码了，相信不久 GPT 就有能力绘制更复杂的图形了。
