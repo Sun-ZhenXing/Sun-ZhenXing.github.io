@@ -8,4 +8,5 @@ index: false
 ---
 
 ```component Catalog
+{}
 ```

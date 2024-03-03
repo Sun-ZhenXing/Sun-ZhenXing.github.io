@@ -1,13 +1,13 @@
 import { hopeTheme } from 'vuepress-theme-hope'
 
 import { projects } from './extend/'
-import { Navbar } from './navbar/index.js'
-import { Sidebar } from './sidebar/index.js'
+import { Navbar } from './navbar'
+import { Sidebar } from './sidebar'
 
 export default hopeTheme({
   author: {
-    name: '鸭梨',
-    url: 'https://github.com/Sun-ZhenXing',
+    name: 'Alex Sun',
+    url: 'https://blog.alexsun.top/',
   },
   blog: {
     description: '鸭梨的博客',
@@ -80,6 +80,7 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+    catalog: {},
     copyCode: {
       showInMobile: true,
     },
@@ -137,28 +138,50 @@ export default hopeTheme({
     },
 
     mdEnhance: {
+      // GFM 警告
+      alert: true,
+      // 自定义对齐
       align: true,
+      // 属性
       attrs: true,
+      // Chart 图表
       chart: false,
+      // 代码组
       codetabs: true,
-      demo: false,
+      // 组件
+      component: true,
+      // 代码示例
+      demo: true,
+      // Echarts 图表
       echarts: true,
+      // figure
       figure: true,
-      flowchart: false,
-      footnote: true,
+      // 流程图
+      flowchart: true,
+      // GFM 语法
       gfm: true,
-      hint: true,
+      // 图片懒加载
       imgLazyload: true,
+      // 图片标记
+      imgMark: true,
+      // 图片大小
       imgSize: true,
+      // 包含文件
       include: true,
+      // KaTeX 数学公式
       katex: {
+        // 支持复制公式
         copy: true,
       },
+      // 标注
       mark: true,
+      // Markmap
+      markmap: true,
+      // Mermaid
       mermaid: true,
-      revealJs: {
-        plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-      },
+      // 幻灯片
+      revealJs: true,
+      // 风格化
       stylize: [
         {
           matcher: /@note:.+/,
@@ -209,10 +232,15 @@ export default hopeTheme({
           },
         },
       ],
+      // 下标
       sub: true,
+      // 上标
       sup: true,
+      // 标签页分组
       tabs: true,
+      // v-pre 容器
       vPre: true,
+      // Vue Playground
       vuePlayground: true,
     },
     pwa: {

@@ -56,6 +56,12 @@ devDependencies:
   markmap-lib:
     specifier: ^0.16.0
     version: 0.16.0(markmap-common@0.16.0)
+  markmap-toolbar:
+    specifier: ^0.16.0
+    version: 0.16.0(markmap-common@0.16.0)
+  markmap-view:
+    specifier: ^0.16.0
+    version: 0.16.0(markmap-common@0.16.0)
   mermaid:
     specifier: ^10.8.0
     version: 10.8.0
@@ -76,7 +82,7 @@ devDependencies:
     version: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(typescript@5.3.3)(vue@3.4.21)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.27
-    version: 2.0.0-rc.27(@vue/repl@4.1.1)(@vuepress/plugin-docsearch@2.0.0-rc.18)(@vuepress/plugin-pwa@2.0.0-rc.18)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8)
+    version: 2.0.0-rc.27(@vue/repl@4.1.1)(@vuepress/plugin-docsearch@2.0.0-rc.18)(@vuepress/plugin-pwa@2.0.0-rc.18)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(markmap-toolbar@0.16.0)(markmap-view@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8)
 
 packages:
 
@@ -6235,6 +6241,16 @@ packages:
       remarkable-katex: 1.2.1
     dev: true
 
+  /markmap-toolbar@0.16.0(markmap-common@0.16.0):
+    resolution: {integrity: sha512-Umnxc6Y4T0CioPlmvfm5M5D2/7BJTA82kvgRQIu/y0oQzJl0h3mxBOKPrhok+89RotagPwhQ4g7el4Td2W+tDQ==}
+    peerDependencies:
+      markmap-common: '*'
+    dependencies:
+      '@babel/runtime': 7.24.0
+      '@gera2ld/jsx-dom': 2.2.2
+      markmap-common: 0.16.0
+    dev: true
+
   /markmap-view@0.16.0(markmap-common@0.16.0):
     resolution: {integrity: sha512-JOiSEThs8B4bAP9E6rcCWOz2SsMwCBFaR76wLARRVb04C/qLiLmvrm675kNPq4lRBAwtugHCYvjG0otpSlB4Cw==}
     peerDependencies:
@@ -8077,7 +8093,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-plugin-md-enhance@2.0.0-rc.27(@vue/repl@4.1.1)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8):
+  /vuepress-plugin-md-enhance@2.0.0-rc.27(@vue/repl@4.1.1)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(markmap-toolbar@0.16.0)(markmap-view@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8):
     resolution: {integrity: sha512-ZU+mR3Uy77faUfINnA0sgG/Ezbu2VAY/XnFmPGfr6KFYYWzyhH2rv8W7NvGslR4gri1wxHnVZ3ImP7rhTYh9NQ==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -8160,6 +8176,8 @@ packages:
       js-yaml: 4.1.0
       katex: 0.16.9
       markmap-lib: 0.16.0(markmap-common@0.16.0)
+      markmap-toolbar: 0.16.0(markmap-common@0.16.0)
+      markmap-view: 0.16.0(markmap-common@0.16.0)
       mermaid: 10.8.0
       reveal.js: 5.0.5
       vue: 3.4.21(typescript@5.3.3)
@@ -8213,7 +8231,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-theme-hope@2.0.0-rc.27(@vue/repl@4.1.1)(@vuepress/plugin-docsearch@2.0.0-rc.18)(@vuepress/plugin-pwa@2.0.0-rc.18)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8):
+  /vuepress-theme-hope@2.0.0-rc.27(@vue/repl@4.1.1)(@vuepress/plugin-docsearch@2.0.0-rc.18)(@vuepress/plugin-pwa@2.0.0-rc.18)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(markmap-toolbar@0.16.0)(markmap-view@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8):
     resolution: {integrity: sha512-6/TqFrehr/hk/I5SGmOXVTY0urTvKNaifCuP1v2o8eVmdnYlnFzGHhQk89yZz0zeza54kzYJAUkQbqO0Fc6J8A==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -8274,7 +8292,7 @@ packages:
       vuepress: 2.0.0-rc.8(@vuepress/bundler-vite@2.0.0-rc.8)(typescript@5.3.3)(vue@3.4.21)
       vuepress-plugin-comment2: 2.0.0-rc.27(typescript@5.3.3)(vuepress@2.0.0-rc.8)
       vuepress-plugin-components: 2.0.0-rc.27(typescript@5.3.3)(vuepress@2.0.0-rc.8)
-      vuepress-plugin-md-enhance: 2.0.0-rc.27(@vue/repl@4.1.1)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8)
+      vuepress-plugin-md-enhance: 2.0.0-rc.27(@vue/repl@4.1.1)(echarts@5.5.0)(flowchart.ts@3.0.0)(katex@0.16.9)(markdown-it@14.0.0)(markmap-lib@0.16.0)(markmap-toolbar@0.16.0)(markmap-view@0.16.0)(mermaid@10.8.0)(reveal.js@5.0.5)(typescript@5.3.3)(vuepress@2.0.0-rc.8)
       vuepress-plugin-sass-palette: 2.0.0-rc.27(typescript@5.3.3)(vuepress@2.0.0-rc.8)
       vuepress-shared: 2.0.0-rc.27(typescript@5.3.3)(vuepress@2.0.0-rc.8)
     transitivePeerDependencies:

@@ -2,7 +2,7 @@ import { sidebar } from 'vuepress-theme-hope'
 
 export const Sidebar = sidebar({
   '/': [
-    '/posts/meta',
+    '/posts/meta/',
     '/slides',
     '/posts/intro',
   ],

@@ -33,6 +33,8 @@
     "katex": "^0.16.9",
     "lint-staged": "^15.2.2",
     "markmap-lib": "^0.16.0",
+    "markmap-toolbar": "^0.16.0",
+    "markmap-view": "^0.16.0",
     "mermaid": "^10.8.0",
     "remarkable-katex": "^1.2.1",
     "reveal.js": "^5.0.5",

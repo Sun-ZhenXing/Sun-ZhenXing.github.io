@@ -6,5 +6,7 @@ sticky: 50
 ---
 
 ```component Catalog
-base: /
+{
+  "base": "/"
+}
 ```
