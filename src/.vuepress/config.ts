@@ -1,9 +1,6 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { slug as slugify } from 'github-slugger'
 import { defineUserConfig } from 'vuepress'
-
-// remove when vuepress has resolved the types
-// @ts-expect-error missing types
 import { getDirname, path } from 'vuepress/utils'
 
 import theme from './theme'
@@ -44,8 +41,8 @@ export default defineUserConfig({
     },
     importCode: {
       handleImportPath: str => str
-        .replace(/^\//, ROOT_PATH.replace(/(?:|\\|\/)$/, '/'))
-        .replace(/^@\//, CURRENT_PATH.replace(/(?:|\\|\/)$/, '/')),
+        .replace(/^\//, ROOT_PATH.replace(/(?:\\|\/)?$/, '/'))
+        .replace(/^@\//, CURRENT_PATH.replace(/(?:\\|\/)?$/, '/')),
     },
   },
   shouldPrefetch: false,

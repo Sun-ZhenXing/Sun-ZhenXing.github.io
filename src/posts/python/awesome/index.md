@@ -1,0 +1,5 @@
+# Python Awesome
+
+```component Catalog
+{}
+```

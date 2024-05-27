@@ -298,45 +298,45 @@ $$
 然后，求出 $\boldsymbol{A}^{\mathsf{T}}\boldsymbol{A}$ 和 $\boldsymbol{A}\boldsymbol{A}^{\mathsf{T}}$ 的特征值和特征向量：
 
 1. $\boldsymbol{A}^{\mathsf{T}}\boldsymbol{A}$ 的特征值和特征向量
-  $$
-  \lambda_1 = 3,\,
-  \boldsymbol{v}_1 = \begin{bmatrix}
-    1 / \sqrt{2} \\
-    1 / \sqrt{2}
-  \end{bmatrix}
-  $$
-  $$
-  \lambda_2 = 1,\,
-  \boldsymbol{v}_2 = \begin{bmatrix}
-    -1 / \sqrt{2} \\
-    1 / \sqrt{2}
-  \end{bmatrix}
-  $$
-1. $\boldsymbol{A}\boldsymbol{A}^{\mathsf{T}}$ 的特征值和特征向量
-  $$
-  \lambda_1 = 3,\,
-  \boldsymbol{u}_1 = \begin{bmatrix}
-    1 / \sqrt{6} \\
-    2 / \sqrt{6} \\
-    1 / \sqrt{6}
-  \end{bmatrix}
-  $$
-  $$
-  \lambda_2 = 1,\,
-  \boldsymbol{u}_2 = \begin{bmatrix}
-    1 / \sqrt{2} \\
-    0 \\
-    -1 / \sqrt{2}
-  \end{bmatrix}
-  $$
-  $$
-  \lambda_3 = 0,\,
-  \boldsymbol{u}_3 = \begin{bmatrix}
-    1 / \sqrt{3} \\
-    -1 / \sqrt{3} \\
-    1 / \sqrt{3}
-  \end{bmatrix}
-  $$
+    $$
+    \lambda_1 = 3,\,
+    \boldsymbol{v}_1 = \begin{bmatrix}
+      1 / \sqrt{2} \\
+      1 / \sqrt{2}
+    \end{bmatrix}
+    $$
+    $$
+    \lambda_2 = 1,\,
+    \boldsymbol{v}_2 = \begin{bmatrix}
+      -1 / \sqrt{2} \\
+      1 / \sqrt{2}
+    \end{bmatrix}
+    $$
+2. $\boldsymbol{A}\boldsymbol{A}^{\mathsf{T}}$ 的特征值和特征向量
+    $$
+    \lambda_1 = 3,\,
+    \boldsymbol{u}_1 = \begin{bmatrix}
+      1 / \sqrt{6} \\
+      2 / \sqrt{6} \\
+      1 / \sqrt{6}
+    \end{bmatrix}
+    $$
+    $$
+    \lambda_2 = 1,\,
+    \boldsymbol{u}_2 = \begin{bmatrix}
+      1 / \sqrt{2} \\
+      0 \\
+      -1 / \sqrt{2}
+    \end{bmatrix}
+    $$
+    $$
+    \lambda_3 = 0,\,
+    \boldsymbol{u}_3 = \begin{bmatrix}
+      1 / \sqrt{3} \\
+      -1 / \sqrt{3} \\
+      1 / \sqrt{3}
+    \end{bmatrix}
+    $$
 
 其次，我们利用 $\boldsymbol{A}\boldsymbol{v}_i = \sigma_i\boldsymbol{u}_i$，$i = 1,\,2$，求奇异值：
 

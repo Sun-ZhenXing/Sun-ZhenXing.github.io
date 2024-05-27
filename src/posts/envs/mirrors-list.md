@@ -73,6 +73,18 @@ deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe mul
 ' > /etc/apt/sources.list
 ```
 
+一键更新（以清华镜像为例）：
+
+```bash
+sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+```
+
+安全更新源：
+
+```bash
+sed -i 's/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+```
+
 #### Ubuntu 22.04 (jammy)
 
 ::: code-tabs
@@ -80,6 +92,10 @@ deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe mul
 @tab 官方源
 
 ```bash
+deb http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
 ```
 
 @tab 清华大学
@@ -109,6 +125,10 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted 
 @tab 官方源
 
 ```bash
+deb http://archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
 ```
 
 @tab 清华大学
