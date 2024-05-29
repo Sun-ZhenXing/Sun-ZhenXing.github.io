@@ -11,6 +11,8 @@
 - [ ] Python 标准库
 - [ ] Python 设计模式
 - [ ] Python 异步编程
+  - [x] 协程
+- [ ] Python 函数式编程
 - [ ] Python 工程化
 - [ ] Python 构建发布
 - [ ] Python Qt
