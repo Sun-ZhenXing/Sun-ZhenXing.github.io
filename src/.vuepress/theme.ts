@@ -45,7 +45,6 @@ export default hopeTheme({
       // Zhihu: 'https://example.com',
     },
     name: '鸭梨',
-    roundAvatar: true,
   },
 
   docsDir: 'src',
